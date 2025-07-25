@@ -6,6 +6,7 @@ import Gallery from './Gallery';
 import Testimonials from './Testimonials';
 import Location from './Location';
 import Contact from './Contact';
+import WeeklyEventsPreview from './WeeklyEventsPreview';
 import { Helmet } from 'react-helmet-async';
 
 const HomePage = () => (
@@ -16,6 +17,7 @@ const HomePage = () => (
     </Helmet>
     <Hero />
     <About />
+    <WeeklyEventsPreview />
     <MenuPreview />
     <Gallery />
     <Testimonials />

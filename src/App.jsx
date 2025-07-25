@@ -19,6 +19,7 @@ const Testimonials = lazy(() => import('./components/sections/Testimonials'));
 const MenuPage = lazy(() => import('./components/sections/MenuPage'));
 const MenuGallery = lazy(() => import('./components/sections/MenuGallery'));
 const HomePage = lazy(() => import('./components/sections/HomePage'));
+const WeeklyEvents = lazy(() => import('./components/sections/WeeklyEvents'));
 
 // Loading Component
 const LoadingSpinner = () => (
@@ -85,6 +86,7 @@ function App() {
               <Route path="/menu-gallery" element={<MenuGallery />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/events" element={<WeeklyEvents />} />
               {/* Add other routes as needed */}
             </Routes>
           </Suspense>

@@ -115,9 +115,37 @@ const MenuPage = () => {
     { title: 'Chinese Menu', data: chineseMenu.map(filterSection) },
   ];
 
+  const menuCategories = [
+    { label: 'Indian', image: '/images/menu/indian-menu-1.jpg' },
+    { label: 'Nigerian', image: '/images/menu/nigerian-menu-1.jpg' },
+    { label: 'Chinese', image: '/images/menu/chinese-menu-1.jpg' },
+    { label: 'Grill House', image: '/images/menu/grill-house-menu-1.jpg' },
+    { label: 'Pizza', image: '/images/menu/pizza-menu.jpg' },
+    { label: 'Bar', image: '/images/menu/bar-menu-1.jpg' }
+  ];
+
   return (
     <div className="max-w-4xl mx-auto py-12 px-4">
-      <h1 className="text-4xl font-display font-bold text-center text-primary-500 mb-8">Our Menu</h1>
+      <h1 className="text-4xl font-display font-bold text-center text-primary-500 mb-4">Our Menu</h1>
+      <p className="text-center text-lg text-neutral-600 mb-10">Explore our diverse menu categories. Tap a menu to zoom in or scroll down to search and browse all dishes.</p>
+      {/* Menu Images Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+        {menuCategories.map((cat, idx) => (
+          <div key={cat.label} className="group relative rounded-2xl overflow-hidden shadow-lg border border-neutral-200 bg-white/80 hover:shadow-2xl transition-all duration-300">
+            <img
+              src={cat.image}
+              alt={`${cat.label} Menu`}
+              className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+              loading="lazy"
+              onClick={() => window.open(cat.image, '_blank')}
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+              <span className="text-white text-lg font-bold drop-shadow">{cat.label}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      {/* Searchable Menu List (existing) */}
       <div className="mb-10 flex justify-center">
         <input
           type="text"
