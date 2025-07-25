@@ -1,138 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight, Flame, Leaf, Star, Wine, Coffee } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { nigerianMenu, chineseMenu, grillHouseMenu, indoChineseIndianCurriesMenu, pizzaMenu, beerAndSpiritsMenu, coldBeveragesAndCocktailsMenu } from '../../data/menuData';
 
 const MenuPreview = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('appetizers');
+  const [activeCategory, setActiveCategory] = useState('indian');
   const sectionRef = useRef(null);
 
   const categories = [
-    { id: 'appetizers', name: 'Appetizers', icon: Star },
-    { id: 'mains', name: 'Main Course', icon: Flame },
-    { id: 'vegetarian', name: 'Vegetarian', icon: Leaf },
-    { id: 'beverages', name: 'Beverages', icon: Wine },
-    { id: 'desserts', name: 'Desserts', icon: Coffee }
+    { id: 'indian', name: 'Indian', icon: Star },
+    { id: 'nigerian', name: 'Nigerian', icon: Flame },
+    { id: 'chinese', name: 'Chinese', icon: Leaf },
+    { id: 'continental', name: 'Continental', icon: Coffee },
+    { id: 'bbqgrill', name: 'BBQ & Grill', icon: Wine },
+    { id: 'bar', name: 'Bar & Cocktails', icon: ArrowRight }
   ];
 
   const menuItems = {
-    appetizers: [
-      {
-        name: 'Tandoori Chicken Wings',
-        description: 'Marinated in yogurt and spices, cooked in our traditional tandoor',
-        price: '$16',
-        spicy: true,
-        popular: true,
-        image: '/images/menu/bar-menu-1.jpg'
-      },
-      {
-        name: 'Samosa Chaat',
-        description: 'Crispy samosas topped with tangy chutneys and fresh herbs',
-        price: '$12',
-        vegetarian: true,
-        image: '/images/menu/indian-menu-1.jpg'
-      },
-      {
-        name: 'Seekh Kebab',
-        description: 'Minced lamb skewers with aromatic spices and mint chutney',
-        price: '$18',
-        spicy: true,
-        image: '/images/menu/bar-menu-2.jpg'
-      }
-    ],
-    mains: [
-      {
-        name: 'Butter Chicken',
-        description: 'Tender chicken in rich tomato-based creamy curry sauce',
-        price: '$24',
-        popular: true,
-        image: '/images/menu/indian-menu-2.jpg'
-      },
-      {
-        name: 'Lamb Biryani',
-        description: 'Fragrant basmati rice layered with spiced lamb and saffron',
-        price: '$28',
-        spicy: true,
-        image: '/images/menu/bar-menu-3.jpg'
-      },
-      {
-        name: 'Fish Curry',
-        description: 'Fresh catch of the day in coconut-based South Indian curry',
-        price: '$26',
-        spicy: true,
-        image: '/images/menu/bar-menu-4.jpg'
-      }
-    ],
-    vegetarian: [
-      {
-        name: 'Paneer Makhani',
-        description: 'Cottage cheese cubes in silky tomato and cream sauce',
-        price: '$20',
-        vegetarian: true,
-        popular: true,
-        image: '/images/menu/indian-menu-1.jpg'
-      },
-      {
-        name: 'Dal Tadka',
-        description: 'Yellow lentils tempered with cumin and fresh herbs',
-        price: '$16',
-        vegetarian: true,
-        image: '/images/menu/indian-menu-2.jpg'
-      },
-      {
-        name: 'Aloo Gobi',
-        description: 'Potatoes and cauliflower cooked with turmeric and spices',
-        price: '$18',
-        vegetarian: true,
-        image: '/images/menu/bar-menu-1.jpg'
-      }
-    ],
-    beverages: [
-      {
-        name: 'Mango Lassi Cocktail',
-        description: 'Traditional lassi with premium vodka and fresh mango',
-        price: '$14',
-        popular: true,
-        image: '/images/menu/bar-menu-2.jpg'
-      },
-      {
-        name: 'Spiced Chai Martini',
-        description: 'Indian spices meet premium gin in this unique creation',
-        price: '$16',
-        image: '/images/menu/bar-menu-3.jpg'
-      },
-      {
-        name: 'Fresh Lime Water',
-        description: 'Refreshing blend of fresh lime, mint, and sparkling water',
-        price: '$8',
-        vegetarian: true,
-        image: '/images/menu/bar-menu-4.jpg'
-      }
-    ],
-    desserts: [
-      {
-        name: 'Gulab Jamun',
-        description: 'Soft milk dumplings in rose-scented sugar syrup',
-        price: '$10',
-        vegetarian: true,
-        popular: true,
-        image: '/images/menu/indian-menu-1.jpg'
-      },
-      {
-        name: 'Kulfi',
-        description: 'Traditional Indian ice cream with cardamom and pistachios',
-        price: '$12',
-        vegetarian: true,
-        image: '/images/menu/indian-menu-2.jpg'
-      },
-      {
-        name: 'Ras Malai',
-        description: 'Delicate cheese dumplings in sweet, creamy milk sauce',
-        price: '$14',
-        vegetarian: true,
-        image: '/images/menu/bar-menu-1.jpg'
-      }
-    ]
+    indian: indoChineseIndianCurriesMenu[0]?.items?.slice(0, 3) || [],
+    nigerian: nigerianMenu[0]?.items?.slice(0, 3) || [],
+    chinese: chineseMenu[0]?.items?.slice(0, 3) || [],
+    continental: pizzaMenu.slice(0, 3) || [],
+    bbqgrill: grillHouseMenu[0]?.items?.slice(0, 3) || [],
+    bar: coldBeveragesAndCocktailsMenu[2]?.items?.slice(0, 3) || []
   };
 
   useEffect(() => {
@@ -171,11 +62,10 @@ const MenuPreview = () => {
             Our Menu
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
-            Exquisite <span className="text-transparent bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text">Flavors</span>
+            A World of <span className="text-transparent bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text">Flavors</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover our carefully curated selection of authentic Indian dishes, 
-            each prepared with the finest ingredients and traditional techniques.
+            Discover our multi-cuisine menu: Indian, Nigerian, Chinese, Continental, BBQ & Grill, and a full Bar. Every dish is crafted with passion and inspired by the harmony of nature and culture at Tamberma.
           </p>
         </div>
 
@@ -214,6 +104,7 @@ const MenuPreview = () => {
                 <img 
                   src={item.image}
                   alt={item.name}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

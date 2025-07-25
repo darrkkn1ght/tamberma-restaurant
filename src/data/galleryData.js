@@ -45,6 +45,46 @@ export const galleryData = {
         category: 'food',
         title: 'Signature Curries',
         description: 'Authentic Indian flavors crafted with premium ingredients'
+      },
+      {
+        id: 'food-2',
+        src: '/images/gallery/food-2.jpg',
+        alt: 'Assorted continental and African dishes at Tamberma Restaurant',
+        category: 'food',
+        title: 'Continental & African Delights',
+        description: 'A vibrant selection of continental and African specialties, beautifully plated.'
+      },
+      {
+        id: 'food-3',
+        src: '/images/gallery/gallery078.jpg',
+        alt: 'Gourmet dish at Tamberma Restaurant',
+        category: 'food',
+        title: 'Culinary Creations',
+        description: 'A delicious showcase of Tamberma’s cuisine.'
+      },
+      {
+        id: 'food-4',
+        src: '/images/gallery/gallery081.jpg',
+        alt: 'Plated meal at Tamberma Restaurant',
+        category: 'food',
+        title: 'Culinary Creations',
+        description: 'A delicious showcase of Tamberma’s cuisine.'
+      },
+      {
+        id: 'food-5',
+        src: '/images/gallery/gallery099.jpg',
+        alt: 'Chef’s special at Tamberma Restaurant',
+        category: 'food',
+        title: 'Culinary Creations',
+        description: 'A delicious showcase of Tamberma’s cuisine.'
+      },
+      {
+        id: 'food-6',
+        src: '/images/gallery/tambs16.jpg',
+        alt: 'Signature dish at Tamberma Restaurant',
+        category: 'food',
+        title: 'Culinary Creations',
+        description: 'A delicious showcase of Tamberma’s cuisine.'
       }
     ],
   
@@ -79,6 +119,14 @@ export const galleryData = {
         featured: true
       },
       {
+        id: 'featured-6',
+        src: '/images/gallery/food-2.jpg',
+        alt: 'Assorted continental and African dishes',
+        category: 'food',
+        title: 'Continental & African Delights',
+        featured: true
+      },
+      {
         id: 'featured-3',
         src: '/images/gallery/cocktails-1.jpg',
         alt: 'Craft cocktails and premium beverages',
@@ -100,6 +148,86 @@ export const galleryData = {
         alt: 'Outdoor terrace dining',
         category: 'exterior',
         title: 'Outdoor Dining',
+        featured: true
+      },
+      {
+        id: 'featured-7',
+        src: '/images/gallery/gallery058.jpg',
+        alt: 'Guests enjoying their meal at Tamberma Restaurant',
+        category: 'people',
+        title: 'Guests & Moments',
+        featured: true
+      },
+      {
+        id: 'featured-8',
+        src: '/images/gallery/gallery059.jpg',
+        alt: 'Friends dining at Tamberma Restaurant',
+        category: 'people',
+        title: 'Guests & Moments',
+        featured: true
+      },
+      {
+        id: 'featured-9',
+        src: '/images/gallery/tambs15.jpeg',
+        alt: 'Family gathering at Tamberma Restaurant',
+        category: 'people',
+        title: 'Guests & Moments',
+        featured: true
+      },
+      {
+        id: 'featured-10',
+        src: '/images/gallery/tambs23.jpeg',
+        alt: 'Celebration at Tamberma Restaurant',
+        category: 'people',
+        title: 'Guests & Moments',
+        featured: true
+      },
+      {
+        id: 'featured-11',
+        src: '/images/gallery/gallery078.jpg',
+        alt: 'Gourmet dish at Tamberma Restaurant',
+        category: 'food',
+        title: 'Culinary Creations',
+        featured: true
+      },
+      {
+        id: 'featured-12',
+        src: '/images/gallery/gallery081.jpg',
+        alt: 'Plated meal at Tamberma Restaurant',
+        category: 'food',
+        title: 'Culinary Creations',
+        featured: true
+      },
+      {
+        id: 'featured-13',
+        src: '/images/gallery/gallery099.jpg',
+        alt: 'Chef’s special at Tamberma Restaurant',
+        category: 'food',
+        title: 'Culinary Creations',
+        featured: true
+      },
+      {
+        id: 'featured-14',
+        src: '/images/gallery/tambs16.jpg',
+        alt: 'Signature dish at Tamberma Restaurant',
+        category: 'food',
+        title: 'Culinary Creations',
+        featured: true
+      },
+      {
+        id: 'featured-15',
+        src: '/images/gallery/gallery093.jpg',
+        alt: 'Chef flambéing a dish at Tamberma Restaurant',
+        category: 'action',
+        title: 'Flambé in Action',
+        featured: true
+      },
+      {
+        id: 'featured-16',
+        src: '/images/gallery/gallery095.jpg',
+        alt: 'Dramatic flambé at Tamberma Restaurant',
+        category: 'action',
+        title: 'Flambé in Action',
         featured: true
       }
     ],
@@ -130,6 +258,16 @@ export const galleryData = {
         id: 'exterior',
         name: 'Outdoor',
         slug: 'exterior'
+      },
+      {
+        id: 'people',
+        name: 'People',
+        slug: 'people'
+      },
+      {
+        id: 'action',
+        name: 'Action',
+        slug: 'action'
       }
     ]
   };

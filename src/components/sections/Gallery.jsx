@@ -1,64 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ImageGallery from '../features/ImageGallery';
+import { galleryData } from '../../data/galleryData';
+import { SkeletonCard } from '../ui/LoadingSpinner';
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [loading, setLoading] = useState(true);
 
-  const categories = [
-    { id: 'all', label: 'All', count: 6 },
-    { id: 'food', label: 'Cuisine', count: 2 },
-    { id: 'ambiance', label: 'Ambiance', count: 3 },
-    { id: 'cocktails', label: 'Cocktails', count: 1 }
-  ];
-
-  const galleryItems = [
-    {
-      id: 1,
-      src: '/images/gallery/hero-bg.jpg',
-      alt: 'Tamberma Restaurant interior',
-      category: 'ambiance',
-      title: 'Elegant Interior'
-    },
-    {
-      id: 2,
-      src: '/images/gallery/food-1.jpg',
-      alt: 'Premium Indian cuisine',
-      category: 'food',
-      title: 'Signature Dishes'
-    },
-    {
-      id: 3,
-      src: '/images/gallery/cocktails-1.jpg',
-      alt: 'Craft cocktails',
-      category: 'cocktails',
-      title: 'Craft Cocktails'
-    },
-    {
-      id: 4,
-      src: '/images/gallery/ambiance-1.jpg',
-      alt: 'Restaurant ambiance',
-      category: 'ambiance',
-      title: 'Warm Atmosphere'
-    },
-    {
-      id: 5,
-      src: '/images/gallery/ambiance-2.jpg',
-      alt: 'Dining area',
-      category: 'ambiance',
-      title: 'Fine Dining'
-    },
-    {
-      id: 6,
-      src: '/images/gallery/outdoor.jpg',
-      alt: 'Outdoor dining',
-      category: 'food',
-      title: 'Al Fresco Dining'
-    }
-  ];
+  const categories = galleryData.categories;
+  const galleryItems = galleryData.featured;
 
   const filteredItems = selectedCategory === 'all' 
     ? galleryItems 
     : galleryItems.filter(item => item.category === selectedCategory);
+
+  // Simulate loading (replace with real image preloading if needed)
+  useEffect(() => {
+    setLoading(true);
+    const timeout = setTimeout(() => setLoading(false), 1200);
+    return () => clearTimeout(timeout);
+  }, [selectedCategory]);
 
   return (
     <section id="gallery" className="py-20 bg-neutral-900">
@@ -75,7 +36,10 @@ const Gallery = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Step into our world of culinary artistry and sophisticated ambiance. 
-            Every corner tells a story of passion, tradition, and excellence.
+            Every corner tells a story of passion, tradition, and excellence.<br />
+            <span className="block mt-4 text-primary-400 font-medium">
+              For more photos, follow us on <a href="https://instagram.com/tamberma_ibadan" target="_blank" rel="noopener noreferrer" className="underline">Instagram @tamberma_ibadan</a>.
+            </span>
           </p>
         </div>
 
@@ -101,49 +65,52 @@ const Gallery = () => {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item, index) => (
-            <div
-              key={item.id}
-              className="group relative bg-neutral-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
-              style={{
-                animationDelay: `${index * 100}ms`
-              }}
-            >
-              {/* Image Container */}
-              <div className="relative h-80 overflow-hidden">
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
-                
-                {/* Content Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-display text-white mb-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                    {item.title}
-                  </h3>
-                  <div className="flex items-center text-primary-400 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
-                    <span className="text-sm font-medium">View Details</span>
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+          {loading
+            ? Array.from({ length: 6 }).map((_, i) => (
+                <SkeletonCard key={i} className="h-96" />
+              ))
+            : filteredItems.map((item, index) => (
+                <div
+                  key={item.id}
+                  className="group relative bg-neutral-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  {/* Image Container */}
+                  <div className="relative h-80 overflow-hidden">
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+                    
+                    {/* Content Overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h3 className="text-xl font-display text-white mb-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                        {item.title}
+                      </h3>
+                      <div className="flex items-center text-primary-400 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                        <span className="text-sm font-medium">View Details</span>
+                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    {/* Hover Effect */}
+                    <div className="absolute inset-0 bg-primary-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+
+                  {/* Category Badge */}
+                  <div className="absolute top-4 right-4">
+                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-neutral-900 text-xs font-medium rounded-full">
+                      {categories.find(cat => cat.id === item.category)?.label}
+                    </span>
                   </div>
                 </div>
-
-                {/* Hover Effect */}
-                <div className="absolute inset-0 bg-primary-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-
-              {/* Category Badge */}
-              <div className="absolute top-4 right-4">
-                <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-neutral-900 text-xs font-medium rounded-full">
-                  {categories.find(cat => cat.id === item.category)?.label}
-                </span>
-              </div>
-            </div>
-          ))}
+              ))}
         </div>
 
         {/* Load More Button */}
@@ -158,7 +125,7 @@ const Gallery = () => {
       </div>
 
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e67e22' fill-opacity='0.1'%3E%3Cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }} />

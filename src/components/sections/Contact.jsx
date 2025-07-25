@@ -14,7 +14,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Location',
-      content: ["894 Rev'd Oyebode Crescent, Iyaganku GRA, Ibadan", 'Nigeria'],
+      content: ["Quarters 894, Rev'd Oyebode Crescent, Iyaganku, Ibadan", 'Nigeria', 'Alternative: Tamberma Ringroad (delivery only)'],
       action: 'Get Directions'
     },
     {
@@ -24,7 +24,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Phone',
-      content: ['0807 559 0939', '0805 409 0607'],
+      content: ['+234 805 409 0607'],
       action: 'Call Now'
     },
     {
@@ -34,7 +34,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Email',
-      content: ['tambermaibadan@gmail.com'],
+      content: ['tambermang@gmail.com'],
       action: 'Send Email'
     },
     {
@@ -44,7 +44,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Hours',
-      content: ['Monday – Sunday: 11:00 AM – 12:00 AM'],
+      content: ['Contact for current operating hours'],
       action: 'View Menu'
     }
   ];
@@ -57,8 +57,8 @@ const Contact = () => {
           <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.348-1.051-2.348-2.348s1.051-2.348 2.348-2.348 2.348 1.051 2.348 2.348-1.051 2.348-2.348 2.348zm7.718 0c-1.297 0-2.348-1.051-2.348-2.348s1.051-2.348 2.348-2.348 2.348 1.051 2.348 2.348-1.051 2.348-2.348 2.348z"/>
         </svg>
       ),
-      url: 'https://instagram.com/tambermarestaurant',
-      handle: '@tambermarestaurant'
+      url: 'https://instagram.com/tamberma_ibadan',
+      handle: '@tamberma_ibadan'
     },
     {
       name: 'Facebook',
@@ -67,19 +67,18 @@ const Contact = () => {
           <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
         </svg>
       ),
-      url: 'https://facebook.com/tambermarestaurant',
-      handle: 'Tamberma Restaurant'
+      url: 'https://facebook.com/TambermaRestaurant',
+      handle: 'Tamberma Restaurant & Bar'
     },
     {
-      name: 'Linktree',
+      name: 'TikTok',
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" />
-          <path d="M12 8v8M8 12h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm2.5 7.5V15a3.5 3.5 0 11-3.5-3.5h1V8.5h2.5z"/>
         </svg>
       ),
-      url: 'https://linktr.ee/tamberma',
-      handle: 'linktr.ee/tamberma'
+      url: 'https://www.tiktok.com/@helloibadan',
+      handle: '@helloibadan (featured)'
     }
   ];
 
@@ -145,6 +144,8 @@ const Contact = () => {
                     <a
                       key={index}
                       href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center space-x-3 text-gray-300 hover:text-primary-400 transition-colors duration-300 group"
                     >
                       <div className="w-8 h-8 bg-neutral-700 rounded-lg flex items-center justify-center group-hover:bg-primary-400/20 transition-colors duration-300">
@@ -226,12 +227,17 @@ const Contact = () => {
                   <p className="text-gray-400 text-sm mb-4">
                     Click to view our location on Google Maps
                   </p>
-                  <button className="inline-flex items-center px-6 py-3 bg-primary-400 text-white font-medium rounded-full hover:bg-primary-500 transition-colors duration-300">
+                  <a
+                    href="https://www.google.com/maps"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 bg-primary-400 text-white font-medium rounded-full hover:bg-primary-500 transition-colors duration-300"
+                  >
                     <span>View on Google Maps</span>
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -240,11 +246,11 @@ const Contact = () => {
       </div>
 
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-primary-400/5 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-accent-400/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-primary-400/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-accent-400/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
       
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e67e22' fill-opacity='0.1'%3E%3Cpath d='m0 40l40-40h-40v40zm40 0v-40h-40l40 40z'/%3E%3C/g%3E%3C/svg%3E")`,
         }} />

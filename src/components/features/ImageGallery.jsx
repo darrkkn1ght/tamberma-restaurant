@@ -124,6 +124,7 @@ const ImageGallery = ({ images, isOpen, onClose, initialIndex = 0 }) => {
         <img
           src={currentImage.src}
           alt={currentImage.alt}
+          loading="lazy"
           className={`max-w-full max-h-full object-contain transition-opacity duration-500 ${
             isLoading ? 'opacity-0' : 'opacity-100'
           }`}
@@ -188,6 +189,7 @@ const ImageGallery = ({ images, isOpen, onClose, initialIndex = 0 }) => {
               <img
                 src={image.src}
                 alt={image.alt}
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </button>

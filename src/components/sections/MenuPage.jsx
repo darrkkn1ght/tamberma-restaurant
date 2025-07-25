@@ -105,7 +105,7 @@ const MenuPage = () => {
   // Filter all menu data
   const filteredMenus = [
     { title: 'Beer & Spirits', data: beerAndSpiritsMenu.map(filterSection) },
-    { title: 'Cold Beverages & Cocktails', data: coldBeveragesAndCocktailsMenu.map(filterSection) },
+    { title: 'Bar & Cocktails', data: coldBeveragesAndCocktailsMenu.map(filterSection) },
     { title: 'Wine (California, Australia & Champagne)', data: wineMenuCaliforniaAustraliaChampagne.map(filterSection) },
     { title: 'International Wine', data: internationalWineMenu.map(filterSection) },
     { title: 'Pizza', data: pizzaMenu.filter(item => item.name.toLowerCase().includes(query) || item.description?.toLowerCase().includes(query)) },

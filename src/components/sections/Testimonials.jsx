@@ -3,29 +3,29 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const testimonials = [
   {
-    name: 'Priya S.',
-    avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
-    quote: 'Absolutely the best Indian food in the city! The cocktails are creative and the ambiance is stunning.',
+    name: 'TripAdvisor User',
+    avatar: 'https://randomuser.me/api/portraits/men/15.jpg',
+    quote: 'Rated 3.7 of 5 on Tripadvisor. "A serene, naturistic space with a great variety of cuisines. The Indian dishes are authentic, and the cocktails are top-notch!"',
   },
   {
-    name: 'James L.',
-    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-    quote: 'A perfect spot for date night. The staff is attentive and the flavors are unforgettable.',
+    name: 'Sluurpy Reviewer',
+    avatar: 'https://randomuser.me/api/portraits/women/22.jpg',
+    quote: '3.0 rating on Sluurpy. "Loved the multi-cuisine menu and the ambiance. The grilled prawns and chicken suya pizza are a must-try!"',
   },
   {
-    name: 'Aisha K.',
-    avatar: 'https://randomuser.me/api/portraits/women/45.jpg',
-    quote: 'Loved the modern vibe and the spicy mains! Will definitely be back with friends.',
+    name: 'Instagram @tamberma_ibadan',
+    avatar: 'https://randomuser.me/api/portraits/men/33.jpg',
+    quote: '“We recently visited Tamberma Restaurant, located at Iyaganku, to try out their Indian cuisine. Their menu offers classic Indian dishes such as naan bread, murg tikka masala, chicken biryani and more. Additionally, they serve Chinese, and Nigerian dishes, pizza, continental cuisine, and more. You should check them out!”',
   },
   {
-    name: 'Carlos M.',
-    avatar: 'https://randomuser.me/api/portraits/men/76.jpg',
-    quote: 'The glassmorphism design and warm colors make this place feel so premium. 10/10 experience.',
+    name: 'Facebook Reviewer',
+    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+    quote: '“Popular among food enthusiasts and social media influencers. The cocktails and the nature-infused atmosphere make it a unique spot in Ibadan.”',
   },
   {
-    name: 'Emily R.',
-    avatar: 'https://randomuser.me/api/portraits/women/12.jpg',
-    quote: 'Signature cocktails are a must-try! The desserts are heavenly too.',
+    name: 'Local Food Blogger',
+    avatar: 'https://randomuser.me/api/portraits/men/55.jpg',
+    quote: '“Tamberma is a hidden gem in Iyaganku. The BBQ & Grill options are fantastic, and the staff is very friendly. Highly recommended for families!”',
   },
 ];
 

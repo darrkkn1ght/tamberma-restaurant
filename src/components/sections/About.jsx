@@ -81,7 +81,7 @@ const About = () => {
   return (
     <section id="about" ref={sectionRef} className="py-20 bg-gradient-to-br from-neutral-50 to-white relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute top-10 left-10 w-32 h-32 bg-orange-400 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-20 w-48 h-48 bg-accent-400 rounded-full blur-3xl" />
       </div>
@@ -95,11 +95,10 @@ const About = () => {
             Our Story
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-            Tradition Meets <span className="text-orange-500">Innovation</span>
+            Nature, Culture & <span className="text-orange-500">Cuisine</span>
           </h2>
           <p className="text-lg text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            At Tamberma Restaurant, we celebrate the rich culinary heritage of India while embracing 
-            contemporary dining experiences. Every dish tells a story of passion, authenticity, and innovation.
+            Tamberma Restaurant & Bar is where nature and food exist in harmony. Our serene, naturistic space is infused with African culture, offering a unique dining experience for families and individuals. We celebrate a multi-cuisine journey—Indian, Nigerian, Chinese, Continental, BBQ & Grill—crafted with passion, authenticity, and a love for quality.
           </p>
         </div>
 
@@ -110,18 +109,13 @@ const About = () => {
             isVisible ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'
           }`}>
             <h3 className="font-display text-3xl font-bold text-neutral-900 mb-6">
-              A Journey Through India's Flavors
+              A Multi-Cuisine Experience in a Naturistic Setting
             </h3>
             <p className="text-neutral-600 mb-6 leading-relaxed">
-              Founded in 2010, Tamberma Restaurant has been a cornerstone of authentic Indian cuisine 
-              in the city. Our journey began with a simple mission: to bring the diverse and vibrant 
-              flavors of India to our community while creating an atmosphere of warmth and hospitality.
+              Founded in Ibadan, Tamberma is a destination for those seeking a blend of African-inspired ambiance and a world of flavors. Our menu features Indian classics, Nigerian favorites, Chinese specialties, Continental delights, and BBQ & Grill—all prepared with the finest ingredients and a focus on quality.
             </p>
             <p className="text-neutral-600 mb-8 leading-relaxed">
-              From our signature tandoor dishes to our carefully crafted cocktail menu, every element 
-              of our restaurant reflects our commitment to quality, authenticity, and exceptional service. 
-              We source the finest ingredients and spices directly from India to ensure every bite 
-              transports you to the heart of Indian culinary tradition.
+              Whether you crave tandoori chicken, Singapore noodles, chicken suya pizza, or a signature cocktail, Tamberma is dedicated to delivering an unforgettable dining experience. Join us to immerse yourself in the beauty of Tamberma—where every meal is a celebration of culture, nature, and taste.
             </p>
 
             {/* Features Grid */}
@@ -206,6 +200,15 @@ const About = () => {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+      {/* Social Media Links */}
+      <div className="mt-12 text-center">
+        <h3 className="text-lg font-semibold text-neutral-700 mb-2">Follow Us</h3>
+        <div className="flex justify-center gap-6">
+          <a href="https://instagram.com/tamberma_ibadan" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:underline font-medium">@tamberma_ibadan</a>
+          <a href="https://facebook.com/TambermaRestaurant" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:underline font-medium">Facebook</a>
+          <a href="https://www.tiktok.com/@helloibadan" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:underline font-medium">TikTok (featured)</a>
         </div>
       </div>
     </section>

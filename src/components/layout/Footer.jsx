@@ -22,22 +22,22 @@ const Footer = () => {
     {
       icon: MapPin,
       title: 'Location',
-      content: '123 Gourmet Street, Foodie District, City 12345'
+      content: "Quarters 894, Rev'd Oyebode Crescent, Iyaganku, Ibadan"
     },
     {
       icon: Phone,
       title: 'Phone',
-      content: '+1 (555) 123-4567'
+      content: '+234 805 409 0607'
     },
     {
       icon: Mail,
       title: 'Email',
-      content: 'hello@tamberma.com'
+      content: 'tambermang@gmail.com'
     },
     {
       icon: Clock,
       title: 'Hours',
-      content: 'Mon-Sun: 5:00 PM - 11:00 PM'
+      content: 'Contact for current operating hours'
     }
   ];
 

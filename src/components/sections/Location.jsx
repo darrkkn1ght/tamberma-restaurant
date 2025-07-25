@@ -1,8 +1,9 @@
 import React from 'react';
 import Button from '../ui/Button';
 
-const address = "894 Rev'd Oyebode Crescent, Iyaganku GRA, Ibadan";
-const phone = '0807 559 0939 / 0805 409 0607';
+const address = "Quarters 894, Rev'd Oyebode Crescent, Iyaganku, Ibadan";
+const phone = '+234 805 409 0607';
+const altLocation = 'Tamberma Ringroad (delivery only)';
 const hours = [
   { day: 'Monday – Sunday', time: '11:00 AM – 12:00 AM' },
 ];
@@ -18,6 +19,7 @@ const Location = () => (
           <div>
             <h3 className="font-display text-xl text-neutral-900 font-semibold mb-1">Address</h3>
             <p className="font-sans text-neutral-700">{address}</p>
+            <p className="font-sans text-neutral-700 text-sm">Alternative: {altLocation}</p>
           </div>
           <div>
             <h3 className="font-display text-xl text-neutral-900 font-semibold mb-1">Hours</h3>
@@ -29,7 +31,7 @@ const Location = () => (
           </div>
           <div>
             <h3 className="font-display text-xl text-neutral-900 font-semibold mb-1">Contact</h3>
-            <a href={`tel:${phone.replace(/[^\d]/g, '')}`} className="text-primary-500 hover:underline font-medium transition-colors duration-150">{phone}</a>
+            <a href={`tel:${phone.replace(/[^\d+]/g, '')}`} className="text-primary-500 hover:underline font-medium transition-colors duration-150">{phone}</a>
           </div>
           <Button
             as="a"

@@ -8,9 +8,10 @@ const Card = ({
   padding = 'default',
   shadow = 'default',
   rounded = 'default',
+  tabIndex,
   ...props 
 }) => {
-  const baseClasses = 'bg-white transition-all duration-300 ease-in-out';
+  const baseClasses = 'bg-white transition-all duration-300 ease-in-out relative focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400';
   
   const variants = {
     default: 'border border-neutral-200',
@@ -21,7 +22,7 @@ const Card = ({
   };
   
   const hoverEffects = {
-    true: hover ? 'hover:shadow-2xl hover:-translate-y-2 cursor-pointer' : '',
+    true: hover ? 'hover:shadow-2xl hover:-translate-y-2 cursor-pointer active:scale-95 focus:shadow-2xl focus:-translate-y-2' : '',
     false: ''
   };
   
@@ -52,10 +53,13 @@ const Card = ({
   const classes = `${baseClasses} ${variants[variant]} ${hoverEffects[hover]} ${paddings[padding]} ${shadows[shadow]} ${roundedSizes[rounded]} ${className}`;
   
   return (
-    <div className={classes} {...props}>
+    <div
+      className={classes}
+      tabIndex={tabIndex !== undefined ? tabIndex : hover ? 0 : undefined}
+      {...props}
+    >
       {/* Card content */}
       {children}
-      
       {/* Subtle highlight overlay for interactive cards */}
       {hover && (
         <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-transparent opacity-0 hover:opacity-5 transition-opacity duration-300 rounded-inherit pointer-events-none"></div>
@@ -130,7 +134,7 @@ const CardImage = ({ src, alt, className = '', aspectRatio = 'default', ...props
       <img 
         src={src} 
         alt={alt}
-        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 active:scale-100 focus:scale-105"
         {...props}
       />
     </div>

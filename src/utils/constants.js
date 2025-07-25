@@ -24,7 +24,7 @@ export const COLORS = {
     description: 'A rustic open-air restaurant and bar in the heart of Ibadan, offering a fusion of African, Indian, and Continental delights with vibrant cocktails and soulful ambiance.',
     contact: {
       phone: '0807 559 0939 / 0805 409 0607',
-      email: 'tambermaibadan@gmail.com',
+      email: 'tambermang@gmail.com',
       address: {
         street: "894 Rev'd Oyebode Crescent",
         city: 'Iyaganku GRA',

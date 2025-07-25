@@ -13,6 +13,7 @@ const ReservationForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [errors, setErrors] = useState({});
 
   // Generate time slots
   const timeSlots = [
@@ -31,26 +32,34 @@ const ReservationForm = () => {
     }));
   };
 
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = 'Name is required.';
+    if (!formData.email.trim()) newErrors.email = 'Email is required.';
+    else if (!/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = 'Enter a valid email address.';
+    if (!formData.phone.trim()) newErrors.phone = 'Phone number is required.';
+    else if (!/^[+]?\d{7,15}$/.test(formData.phone)) newErrors.phone = 'Enter a valid phone number.';
+    if (!formData.date) newErrors.date = 'Date is required.';
+    if (!formData.time) newErrors.time = 'Time is required.';
+    if (!formData.guests) newErrors.guests = 'Please select number of guests.';
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-
+    if (!validate()) {
+      setIsSubmitting(false);
+      return;
+    }
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
       setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        date: '',
-        time: '',
-        guests: '2',
-        specialRequests: '',
-        occasion: ''
-      });
+      setFormData({ name: '', email: '', phone: '', date: '', time: '', guests: '2', specialRequests: '', occasion: '' });
+      setErrors({});
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -101,7 +110,10 @@ const ReservationForm = () => {
                 required
                 className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-300 bg-white hover:border-neutral-400 group-hover:shadow-sm"
                 placeholder="Enter your full name"
+                aria-invalid={!!errors.name}
+                aria-describedby="name-error"
               />
+              {errors.name && <div id="name-error" className="text-red-600 text-xs mt-1" aria-live="polite">{errors.name}</div>}
             </div>
             
             <div className="group">
@@ -117,7 +129,10 @@ const ReservationForm = () => {
                 required
                 className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-300 bg-white hover:border-neutral-400 group-hover:shadow-sm"
                 placeholder="Enter your email"
+                aria-invalid={!!errors.email}
+                aria-describedby="email-error"
               />
+              {errors.email && <div id="email-error" className="text-red-600 text-xs mt-1" aria-live="polite">{errors.email}</div>}
             </div>
           </div>
 
@@ -134,7 +149,10 @@ const ReservationForm = () => {
               required
               className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-300 bg-white hover:border-neutral-400"
               placeholder="Enter your phone number"
+              aria-invalid={!!errors.phone}
+              aria-describedby="phone-error"
             />
+            {errors.phone && <div id="phone-error" className="text-red-600 text-xs mt-1" aria-live="polite">{errors.phone}</div>}
           </div>
         </div>
 
@@ -245,6 +263,7 @@ const ReservationForm = () => {
         </div>
 
         {/* Submit Status */}
+        <div aria-live="polite">
         {submitStatus === 'success' && (
           <div className="p-4 bg-green-50 border border-green-200 rounded-lg animate-fade-in">
             <div className="flex items-center">
@@ -278,6 +297,7 @@ const ReservationForm = () => {
             </div>
           </div>
         )}
+        </div>
 
         {/* Submit Button */}
         <div className="pt-4">
@@ -306,7 +326,7 @@ const ReservationForm = () => {
         <h3 className="text-lg font-medium text-amber-900 mb-3">Reservation Policy</h3>
         <div className="space-y-2 text-sm text-amber-800">
           <p>• Reservations are held for 15 minutes past the reserved time</p>
-          <p>• For parties of 8 or more, please call us directly at +234 803 123 4567</p>
+          <p>• For parties of 8 or more, please call us directly at <a href="tel:+2348054090607" className="underline">+234 805 409 0607</a></p>
           <p>• Cancellations must be made at least 2 hours in advance</p>
           <p>• We'll send you a confirmation email with all the details</p>
         </div>
@@ -317,13 +337,13 @@ const ReservationForm = () => {
         <p className="text-neutral-600 mb-2">Need help with your reservation?</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
-            href="tel:+2348031234567" 
+            href="tel:+2348054090607" 
             className="inline-flex items-center justify-center px-6 py-2 border border-primary-400 text-primary-400 rounded-lg hover:bg-primary-400 hover:text-white transition-all duration-300"
           >
             📞 Call Us
           </a>
           <a 
-            href="https://wa.me/2348031234567" 
+            href="https://wa.me/2348054090607" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-6 py-2 border border-green-500 text-green-500 rounded-lg hover:bg-green-500 hover:text-white transition-all duration-300"

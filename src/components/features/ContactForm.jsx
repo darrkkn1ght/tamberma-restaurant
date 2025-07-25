@@ -10,6 +10,7 @@ const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [errors, setErrors] = useState({});
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -19,23 +20,32 @@ const ContactForm = () => {
     }));
   };
 
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = 'Name is required.';
+    if (!formData.email.trim()) newErrors.email = 'Email is required.';
+    else if (!/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = 'Enter a valid email address.';
+    if (formData.phone && !/^[+]?\d{7,15}$/.test(formData.phone)) newErrors.phone = 'Enter a valid phone number.';
+    if (!formData.subject) newErrors.subject = 'Please select a subject.';
+    if (!formData.message.trim()) newErrors.message = 'Message is required.';
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-
+    if (!validate()) {
+      setIsSubmitting(false);
+      return;
+    }
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
       setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      setErrors({});
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -61,7 +71,10 @@ const ContactForm = () => {
               required
               className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-300 bg-white hover:border-neutral-400 group-hover:shadow-sm"
               placeholder="Enter your full name"
+              aria-invalid={!!errors.name}
+              aria-describedby="name-error"
             />
+            {errors.name && <div id="name-error" className="text-red-600 text-xs mt-1" aria-live="polite">{errors.name}</div>}
           </div>
           
           <div className="group">
@@ -77,7 +90,10 @@ const ContactForm = () => {
               required
               className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-300 bg-white hover:border-neutral-400 group-hover:shadow-sm"
               placeholder="Enter your email"
+              aria-invalid={!!errors.email}
+              aria-describedby="email-error"
             />
+            {errors.email && <div id="email-error" className="text-red-600 text-xs mt-1" aria-live="polite">{errors.email}</div>}
           </div>
         </div>
 
@@ -95,7 +111,10 @@ const ContactForm = () => {
               onChange={handleInputChange}
               className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-300 bg-white hover:border-neutral-400 group-hover:shadow-sm"
               placeholder="Enter your phone number"
+              aria-invalid={!!errors.phone}
+              aria-describedby="phone-error"
             />
+            {errors.phone && <div id="phone-error" className="text-red-600 text-xs mt-1" aria-live="polite">{errors.phone}</div>}
           </div>
           
           <div className="group">
@@ -109,6 +128,8 @@ const ContactForm = () => {
               onChange={handleInputChange}
               required
               className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-300 bg-white hover:border-neutral-400 group-hover:shadow-sm"
+              aria-invalid={!!errors.subject}
+              aria-describedby="subject-error"
             >
               <option value="">Select a subject</option>
               <option value="general">General Inquiry</option>
@@ -118,6 +139,7 @@ const ContactForm = () => {
               <option value="feedback">Feedback</option>
               <option value="other">Other</option>
             </select>
+            {errors.subject && <div id="subject-error" className="text-red-600 text-xs mt-1" aria-live="polite">{errors.subject}</div>}
           </div>
         </div>
 
@@ -135,10 +157,14 @@ const ContactForm = () => {
             rows="6"
             className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-300 bg-white hover:border-neutral-400 group-hover:shadow-sm resize-vertical"
             placeholder="Tell us how we can help you..."
+            aria-invalid={!!errors.message}
+            aria-describedby="message-error"
           />
+          {errors.message && <div id="message-error" className="text-red-600 text-xs mt-1" aria-live="polite">{errors.message}</div>}
         </div>
 
         {/* Submit Status */}
+        <div aria-live="polite">
         {submitStatus === 'success' && (
           <div className="p-4 bg-green-50 border border-green-200 rounded-lg animate-fade-in">
             <div className="flex items-center">
@@ -172,6 +198,7 @@ const ContactForm = () => {
             </div>
           </div>
         )}
+        </div>
 
         {/* Submit Button */}
         <div className="pt-4">
@@ -199,8 +226,8 @@ const ContactForm = () => {
       <div className="mt-8 p-6 bg-neutral-50 rounded-lg border border-neutral-200">
         <h3 className="text-lg font-medium text-neutral-900 mb-3">Need Immediate Assistance?</h3>
         <div className="space-y-2 text-sm text-neutral-600">
-          <p>📞 <span className="font-medium">Phone:</span> +234 803 123 4567</p>
-          <p>📧 <span className="font-medium">Email:</span> hello@tambermarestaurant.com</p>
+          <p>📞 <span className="font-medium">Phone:</span> +234 805 409 0607</p>
+          <p>📧 <span className="font-medium">Email:</span> <a href="mailto:tambermang@gmail.com" className="underline">tambermang@gmail.com</a></p>
           <p>⏰ <span className="font-medium">Response Time:</span> We typically respond within 2-4 hours during business hours</p>
         </div>
       </div>

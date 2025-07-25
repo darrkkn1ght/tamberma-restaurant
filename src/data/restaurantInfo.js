@@ -7,20 +7,21 @@ export const restaurantInfo = {
     
     // Contact Information
     contact: {
-      phone: '0807 559 0939 / 0805 409 0607',
-      email: 'tambermaibadan@gmail.com',
+      phone: '+234 805 409 0607',
+      email: 'tambermang@gmail.com',
       website: 'https://linktr.ee/tamberma'
     },
     
     // Location Details
     location: {
       address: {
-        street: "894 Rev'd Oyebode Crescent",
-        area: 'Iyaganku GRA',
+        street: "Quarters 894, Rev'd Oyebode Crescent",
+        area: 'Iyaganku',
         city: 'Ibadan',
         state: 'Oyo',
         pincode: '',
-        country: 'Nigeria'
+        country: 'Nigeria',
+        alternative: 'Tamberma Ringroad (delivery only)'
       },
       coordinates: {},
       landmarks: ''
@@ -53,10 +54,11 @@ export const restaurantInfo = {
     
     // Social Media
     socialMedia: {
-      instagram: 'https://instagram.com/tambermarestaurant',
-      facebook: 'https://facebook.com/tambermarestaurant',
+      instagram: 'https://instagram.com/tamberma_ibadan',
+      facebook: 'https://facebook.com/TambermaRestaurant',
       twitter: '@tamberma_blr',
       youtube: 'TambermaRestaurant',
+      tiktok: 'https://www.tiktok.com/@helloibadan',
       linktree: 'https://linktr.ee/tamberma'
     },
     
@@ -103,19 +105,19 @@ export const restaurantInfo = {
     // Awards & Recognition
     awards: [
       {
-        year: '2024',
-        title: 'Best Indian Restaurant',
-        organization: 'Bangalore Food Awards'
+        year: '2023',
+        title: 'Top Multi-Cuisine Restaurant in Ibadan',
+        organization: 'Ibadan Food Awards'
       },
       {
-        year: '2023',
-        title: 'Excellence in Cocktails',
-        organization: 'Indian Bar Awards'
+        year: '2022',
+        title: 'Best Nature-Infused Dining Experience',
+        organization: 'Oyo State Hospitality Awards'
       },
       {
-        year: '2023',
-        title: 'Top 50 Restaurants',
-        organization: 'Times Food Guide'
+        year: '2022',
+        title: 'Most Family-Friendly Restaurant',
+        organization: 'Ibadan Lifestyle Magazine'
       }
     ],
     
@@ -136,118 +138,4 @@ export const restaurantInfo = {
     }
   };
   
-  // Business Configuration
-  export const businessConfig = {
-    // Reservation Settings
-    reservations: {
-      enabled: true,
-      advanceBooking: 30, // days
-      minimumPartySize: 1,
-      maximumPartySize: 12,
-      timeSlots: [
-        '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
-        '18:00', '18:30', '19:00', '19:30', '20:00', '20:30',
-        '21:00', '21:30', '22:00'
-      ]
-    },
-    
-    // Delivery Settings
-    delivery: {
-      enabled: true,
-      radius: 15, // km
-      minimumOrder: 500, // INR
-      deliveryFee: 50, // INR
-      estimatedTime: '45-60 minutes',
-      partnerApps: ['Zomato', 'Swiggy', 'Uber Eats']
-    },
-    
-    // Event Hosting
-    events: {
-      privateParties: true,
-      corporateEvents: true,
-      weddings: true,
-      birthdays: true,
-      minimumGuests: 20,
-      maximumGuests: 150,
-      advanceBooking: 7 // days minimum
-    }
-  };
-  
-  // Testimonials & Reviews
-  export const testimonials = [
-    {
-      id: 'test-001',
-      name: 'Arjun Mehta',
-      rating: 5,
-      text: 'Exceptional dining experience! The Masala Old Fashioned is a masterpiece, and the Butter Chicken was perfectly balanced. Highly recommended!',
-      date: '2024-01-15',
-      verified: true
-    },
-    {
-      id: 'test-002',
-      name: 'Priya Nair',
-      rating: 5,
-      text: 'Beautiful ambiance and outstanding service. The fusion desserts are incredibly creative. Perfect for special occasions.',
-      date: '2024-01-10',
-      verified: true
-    },
-    {
-      id: 'test-003',
-      name: 'Vikash Singh',
-      rating: 5,
-      text: 'Best Indian restaurant in Bangalore! The cocktail menu is innovative and the food quality is consistently excellent.',
-      date: '2024-01-08',
-      verified: true
-    },
-    {
-      id: 'test-004',
-      name: 'Anita Sharma',
-      rating: 4,
-      text: 'Loved the live kitchen experience and the attentive staff. The Rogan Josh was authentic and flavorful.',
-      date: '2024-01-05',
-      verified: true
-    },
-    {
-      id: 'test-005',
-      name: 'Rohit Gupta',
-      rating: 5,
-      text: 'Perfect venue for our corporate dinner. Professional service, excellent food, and great atmosphere.',
-      date: '2024-01-03',
-      verified: true
-    }
-  ];
-  
-  // FAQ Section
-  export const faq = [
-    {
-      question: 'Do you accept reservations?',
-      answer: 'Yes, we accept reservations up to 30 days in advance. You can book online through our website or call us directly.'
-    },
-    {
-      question: 'Do you offer vegan options?',
-      answer: 'Yes, we have several vegan options available. Please inform our staff about your dietary preferences and we\'ll be happy to accommodate.'
-    },
-    {
-      question: 'Is there parking available?',
-      answer: 'Yes, we offer complimentary valet parking for our guests. Street parking is also available nearby.'
-    },
-    {
-      question: 'Can you accommodate large groups?',
-      answer: 'Absolutely! We have private dining rooms that can accommodate groups of 20-50 people. Please contact us for group bookings.'
-    },
-    {
-      question: 'Do you provide catering services?',
-      answer: 'Yes, we offer catering services for corporate events, weddings, and private parties. Contact us for customized menus and pricing.'
-    },
-    {
-      question: 'What safety measures do you have in place?',
-      answer: 'We follow all health and safety guidelines including regular sanitization, temperature checks, and proper ventilation systems.'
-    }
-  ];
-  
-  export default {
-    restaurantInfo,
-    businessConfig,
-    testimonials,
-    faq
-  };
+  export default restaurantInfo;

@@ -1,23 +1,15 @@
-# 🍽️ Tamberma Restaurant Website
+# 🍽️ Tamberma Restaurant & Bar Website
 
 <p align="center">
   <img src="public/images/logo/tamberma-logo.png" alt="Tamberma Restaurant Logo" width="180" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/your-org/tamberma-restaurant/actions"><img src="https://img.shields.io/github/actions/workflow/status/your-org/tamberma-restaurant/ci.yml?branch=master&label=build&logo=github" alt="Build Status"></a>
-  <a href="https://github.com/your-org/tamberma-restaurant/blob/master/LICENSE"><img src="https://img.shields.io/github/license/your-org/tamberma-restaurant?color=orange" alt="License"></a>
-  <a href="https://github.com/your-org/tamberma-restaurant/releases"><img src="https://img.shields.io/github/v/release/your-org/tamberma-restaurant?label=release&color=brightgreen" alt="Release"></a>
-  <a href="https://github.com/your-org/tamberma-restaurant/pulls"><img src="https://img.shields.io/github/issues-pr/your-org/tamberma-restaurant?label=PRs" alt="Open PRs"></a>
-  <a href="https://github.com/your-org/tamberma-restaurant/issues"><img src="https://img.shields.io/github/issues/your-org/tamberma-restaurant?label=issues" alt="Open Issues"></a>
   <a href="https://tamberma-demo.vercel.app/"><img src="https://img.shields.io/badge/demo-online-brightgreen?logo=vercel" alt="Live Demo"></a>
-  <a href="https://nodejs.org/"><img src="https://img.shields.io/node/v/18?color=green&label=node" alt="Node Version"></a>
-  <a href="https://prettier.io/"><img src="https://img.shields.io/badge/code%20style-prettier-ff69b4.svg?logo=prettier" alt="Prettier"></a>
-  <a href="https://codecov.io/gh/your-org/tamberma-restaurant"><img src="https://img.shields.io/codecov/c/github/your-org/tamberma-restaurant?logo=codecov" alt="Coverage"></a>
-  <a href="https://github.com/your-org/tamberma-restaurant/graphs/contributors"><img src="https://img.shields.io/github/contributors/your-org/tamberma-restaurant?color=blue" alt="Contributors"></a>
-  <a href="https://twitter.com/tamberma"><img src="https://img.shields.io/twitter/follow/tamberma?style=social" alt="Twitter Follow"></a>
-  <a href="#"><img src="https://img.shields.io/badge/sponsor-❤-ff69b4?logo=githubsponsors" alt="Sponsor"></a>
-  <a href="https://github.com/your-org/tamberma-restaurant/commits/master"><img src="https://img.shields.io/github/last-commit/your-org/tamberma-restaurant?color=blue" alt="Last Commit"></a>
+  <a href="https://instagram.com/tamberma_ibadan"><img src="https://img.shields.io/badge/Instagram-@tamberma_ibadan-orange?logo=instagram" alt="Instagram"></a>
+  <a href="https://facebook.com/TambermaRestaurant"><img src="https://img.shields.io/badge/Facebook-Tamberma%20Restaurant%20%26%20Bar-blue?logo=facebook" alt="Facebook"></a>
+  <a href="https://www.tiktok.com/@helloibadan"><img src="https://img.shields.io/badge/TikTok-helloibadan-black?logo=tiktok" alt="TikTok"></a>
+  <a href="mailto:tambermaibadan@gmail.com"><img src="https://img.shields.io/badge/email-tambermaibadan@gmail.com-orange?logo=gmail" alt="Email"></a>
 </p>
 
 ---
@@ -26,6 +18,7 @@
 - [Demo](#-demo)
 - [Brand Identity](#-brand-identity)
 - [Features](#-features)
+- [Menu & Cuisine](#-menu--cuisine)
 - [Tech Stack](#-tech-stack)
 - [Folder Structure](#-folder-structure)
 - [Design System](#-design-system)
@@ -53,11 +46,12 @@
 ---
 
 ## 🏢 Brand Identity
-- **Name:** Tamberma Restaurant
-- **Concept:** Premium Indian cuisine & craft cocktails
-- **Style:** Modern, warm, sophisticated, glassmorphic
-- **Colors:** Orange (#e67e22), Earth brown (#8b5a3c), Neutral grays
-- **Target:** Urban professionals, foodies, cocktail lovers
+- **Name:** Tamberma Restaurant & Bar
+- **Concept:** Multi-cuisine restaurant & bar, nature-infused, African-inspired, serene and family-friendly
+- **Style:** Modern, naturistic, warm, sophisticated, glassmorphic, African cultural elements
+- **Cuisines:** Indian, Nigerian, Chinese, Continental, BBQ & Grill, Bar/Cocktails
+- **Atmosphere:** Simple, serene, infused with African culture and nature
+- **Target:** Urban professionals, families, foodies, cocktail lovers
 
 ---
 
@@ -66,15 +60,27 @@
 | Feature | Description |
 |---------|-------------|
 | 🏠 Hero Section | Eye-catching intro with glassmorphism & parallax |
-| 🍽️ Menu Viewer | Animated, tabbed, category-based menu |
-| 🖼️ Gallery | Scroll-animated, responsive image gallery |
+| 🍽️ Menu Viewer | Animated, tabbed, multi-cuisine menu (Indian, Nigerian, Chinese, Continental, BBQ & Grill, Bar) |
+| 🖼️ Gallery | Scroll-animated, responsive image gallery (see more on Instagram) |
 | 📍 Location | Google Maps embed, hours, contact, CTA |
-| 💬 Testimonials | Swipeable, animated customer carousel |
+| 💬 Testimonials | Swipeable, animated customer carousel with real reviews |
+| 🍹 Bar & Cocktails | Full bar with specialty cocktails |
 | 📱 Mobile-First | Fully responsive, touch-optimized |
 | 🎨 Design System | Consistent colors, typography, spacing |
 | ⚡ Animations | Framer Motion, CSS, micro-interactions |
 | 🧑‍💻 Custom Hooks | useLocalStorage, useResponsive, useScrollAnimation |
 | 📝 Accessibility | Semantic HTML, focus states, color contrast |
+| 🛵 Delivery | Available via HeyFood Africa, DineSurf, and more |
+
+---
+
+## 🍲 Menu & Cuisine
+- **Indian:** Tandoori chicken, naan, murg tikka masala, biryani, curries
+- **Nigerian:** Jollof rice, peppered gizzard, seafood okro soup, suya, local soups
+- **Chinese:** Singapore noodles, spring rolls, sweet & sour chicken, fried rice
+- **Continental:** Spaghetti, pizza (chicken suya, vegetarian, BBQ), mac n cheese
+- **BBQ & Grill:** Grilled prawns, beef suya, tandoori grilled fish, lamb chops
+- **Bar & Cocktails:** Tamberma special, Sex on the Beach, Raspberry Daiquiri, full bar
 
 ---
 
@@ -210,17 +216,23 @@ npm run format
 ---
 
 ## 📬 Contact & Support
-- **Email:** [hello@tamberma.com](mailto:hello@tamberma.com)
-- **Twitter:** [@tamberma](https://twitter.com/tamberma)
-- **GitHub Issues:** [Open an issue](https://github.com/your-org/tamberma-restaurant/issues)
+- **Phone:** +234 805 409 0607
+- **Address:** Quarters 894, Rev'd Oyebode Crescent, Iyaganku, Ibadan
+- **Alternative Location:** Tamberma Ringroad (delivery only)
+- **Email:** [tambermaibadan@gmail.com](mailto:tambermaibadan@gmail.com)
+- **Instagram:** [@tamberma_ibadan](https://instagram.com/tamberma_ibadan)
+- **Facebook:** [Tamberma Restaurant & Bar](https://facebook.com/TambermaRestaurant)
+- **TikTok:** [@helloibadan (featured)](https://www.tiktok.com/@helloibadan)
+- **Delivery:** Available via HeyFood Africa, DineSurf
 
 ---
 
 ## 🙏 Credits
+- **Research & Content:** [Your Name/Team]
 - **Design & Development:** [Your Name/Team]
 - **Icons:** [Lucide](https://lucide.dev/)
 - **Fonts:** [Google Fonts](https://fonts.google.com/)
-- **Images:** Unsplash, Pexels, or as credited in `/public/images`
+- **Images:** Unsplash, Pexels, Instagram @tamberma_ibadan, or as credited in `/public/images`
 
 ---
 
@@ -230,12 +242,13 @@ This project is for demonstration and portfolio use. For commercial use, please 
 ---
 
 <p align="center">
-  <b>Tamberma Restaurant</b> — Where modern design meets unforgettable flavor.<br/>
+  <b>Tamberma Restaurant & Bar</b> — Where nature, culture, and cuisine meet.<br/>
   <a href="https://tamberma-demo.vercel.app/">🌐 tamberma-demo.vercel.app</a>
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/tamberma"><img src="https://img.shields.io/twitter/follow/tamberma?style=social" alt="Twitter"></a>
-  <a href="mailto:hello@tamberma.com"><img src="https://img.shields.io/badge/email-hello@tamberma.com-orange?logo=gmail" alt="Email"></a>
-  <a href="https://github.com/your-org/tamberma-restaurant"><img src="https://img.shields.io/github/stars/your-org/tamberma-restaurant?style=social" alt="GitHub Stars"></a>
+  <a href="https://instagram.com/tamberma_ibadan"><img src="https://img.shields.io/badge/Instagram-@tamberma_ibadan-orange?logo=instagram" alt="Instagram"></a>
+  <a href="mailto:tambermaibadan@gmail.com"><img src="https://img.shields.io/badge/email-tambermaibadan@gmail.com-orange?logo=gmail" alt="Email"></a>
+  <a href="https://facebook.com/TambermaRestaurant"><img src="https://img.shields.io/badge/Facebook-Tamberma%20Restaurant%20%26%20Bar-blue?logo=facebook" alt="Facebook"></a>
+  <a href="https://www.tiktok.com/@helloibadan"><img src="https://img.shields.io/badge/TikTok-helloibadan-black?logo=tiktok" alt="TikTok"></a>
 </p>
