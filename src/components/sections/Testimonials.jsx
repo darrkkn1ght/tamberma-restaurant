@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const testimonials = [
@@ -30,10 +30,25 @@ const testimonials = [
 ];
 
 const variants = {
-  enter: { opacity: 0 },
-  center: { opacity: 1 },
-  exit: { opacity: 0 },
+  enter: (dir) => ({
+    x: dir > 0 ? 300 : -300,
+    opacity: 0,
+    position: 'absolute',
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    position: 'relative',
+    transition: { x: { type: 'spring', stiffness: 300, damping: 30 }, opacity: { duration: 0.3 } },
+  },
+  exit: (dir) => ({
+    x: dir < 0 ? 300 : -300,
+    opacity: 0,
+    position: 'absolute',
+  }),
 };
+
+const AUTO_SLIDE_INTERVAL = 5000; // 5 seconds
 
 const Testimonials = () => {
   const [[page, dir], setPage] = useState([0, 0]);
@@ -41,11 +56,20 @@ const Testimonials = () => {
 
   const paginate = (newDir) => setPage([page + newDir, newDir]);
 
+  // Auto-slide logic
+  const timerRef = useRef();
+  useEffect(() => {
+    timerRef.current = setInterval(() => {
+      paginate(1);
+    }, AUTO_SLIDE_INTERVAL);
+    return () => clearInterval(timerRef.current);
+  }, [page]);
+
   return (
     <section className="py-16 px-4 bg-neutral-50">
       <div className="max-w-2xl mx-auto bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-neutral-100 p-8 animate-fade-in">
         <h2 className="font-display text-3xl md:text-4xl text-primary-500 mb-8 text-center tracking-tight">What Our Guests Say</h2>
-        <div className="relative flex items-center justify-center">
+        <div className="relative flex items-center justify-center min-h-[320px]">
           <button
             aria-label="Previous testimonial"
             onClick={() => paginate(-1)}
@@ -53,7 +77,7 @@ const Testimonials = () => {
           >
             <span aria-hidden>‹</span>
           </button>
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center relative min-h-[260px]">
             <AnimatePresence initial={false} custom={dir}>
               <motion.div
                 key={index}
@@ -62,8 +86,9 @@ const Testimonials = () => {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={{ opacity: { duration: 0.4 } }}
+                transition={{ x: { type: 'spring', stiffness: 300, damping: 30 }, opacity: { duration: 0.3 } }}
                 className="w-full max-w-md mx-auto bg-white/90 rounded-2xl p-8 shadow-lg border border-neutral-100 flex flex-col items-center gap-4 animate-glass-morph"
+                style={{ position: 'absolute', left: 0, right: 0 }}
               >
                 <img
                   src={testimonials[index].avatar}
