@@ -66,7 +66,7 @@ const Testimonials = () => {
   }, [page]);
 
   return (
-    <section className="py-16 px-4 bg-neutral-50">
+    <section className="py-8 sm:py-12 md:py-16 px-4 bg-neutral-50">
       <div className="max-w-2xl mx-auto bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-neutral-100 p-8 animate-fade-in">
         <h2 className="font-display text-3xl md:text-4xl text-primary-500 mb-8 text-center tracking-tight">What Our Guests Say</h2>
         <div className="relative flex items-center justify-center min-h-[320px]">

@@ -57,7 +57,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/30" />
       </div>
       {/* Main Content */}
-      <div className="relative z-10 w-full flex flex-col items-center justify-center text-center min-h-screen pt-24 md:pt-32">
+      <div className="relative z-10 w-full flex flex-col items-center justify-center text-center min-h-[70vh] md:min-h-screen pt-10 md:pt-24">
         {/* Logo and main content here */}
         <div className="transform transition-all duration-1500 translate-y-0 opacity-100 w-full flex flex-col items-center justify-center">
           {/* Main Heading */}
@@ -75,25 +75,7 @@ export default function Hero() {
           </p>
 
           {/* Quick Info Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 max-w-4xl mx-auto w-full">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <MapPin className="w-6 h-6 text-orange-400 mx-auto mb-2" />
-              <p className="text-white text-sm font-medium">Downtown Location</p>
-              <p className="text-gray-300 text-xs">Easy Access & Parking</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <Clock className="w-6 h-6 text-orange-400 mx-auto mb-2" />
-              <p className="text-white text-sm font-medium">Open Daily</p>
-              <p className="text-gray-300 text-xs">5:00 PM - 11:00 PM</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <Phone className="w-6 h-6 text-orange-400 mx-auto mb-2" />
-              <p className="text-white text-sm font-medium">Reservations</p>
-              <p className="text-gray-300 text-xs">(555) 123-4567</p>
-            </div>
-          </div>
+          {/* Removed the grid with MapPin, Clock, Phone cards */}
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">

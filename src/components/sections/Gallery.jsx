@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import ImageGallery from '../features/ImageGallery';
 import { galleryData } from '../../data/galleryData';
 import { SkeletonCard } from '../ui/LoadingSpinner';
+import Modal, { ImageModal } from '../ui/Modal';
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [loading, setLoading] = useState(true);
+  const [showAllModal, setShowAllModal] = useState(false);
+  const [zoomIndex, setZoomIndex] = useState(null); // index of zoomed image
 
   const categories = galleryData.categories;
   const galleryItems = galleryData.featured;
@@ -22,7 +25,7 @@ const Gallery = () => {
   }, [selectedCategory]);
 
   return (
-    <section id="gallery" className="py-20 bg-neutral-900">
+    <section id="gallery" className="py-10 sm:py-16 md:py-20 bg-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -64,54 +67,107 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {loading
-            ? Array.from({ length: 6 }).map((_, i) => (
-                <SkeletonCard key={i} className="h-96" />
-              ))
-            : filteredItems.map((item, index) => (
-                <div
-                  key={item.id}
-                  className="group relative bg-neutral-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {/* Image Container */}
-                  <div className="relative h-80 overflow-hidden">
-                    <img
-                      src={item.src}
-                      alt={item.alt}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
-                    
-                    {/* Content Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="text-xl font-display text-white mb-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                        {item.title}
-                      </h3>
-                      <div className="flex items-center text-primary-400 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
-                        <span className="text-sm font-medium">View Details</span>
-                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
+        {(() => {
+          const maxToShow = 4;
+          const items = loading ? [] : filteredItems.slice(0, maxToShow);
+          const extraCount = loading ? 0 : filteredItems.length - maxToShow;
+          return (
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
+              {loading
+                ? Array.from({ length: maxToShow }).map((_, i) => (
+                    <SkeletonCard key={i} className="h-40 sm:h-48 md:h-56" />
+                  ))
+                : items.map((item, index) => (
+                    <div
+                      key={item.id}
+                      className="group relative bg-neutral-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      {/* Image Container */}
+                      <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden">
+                        <img
+                          src={item.src}
+                          alt={item.alt}
+                          loading="lazy"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        {/* Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+                        {/* +N Overlay for last image if extra */}
+                        {extraCount > 0 && index === maxToShow - 1 && (
+                          <button
+                            className="absolute inset-0 bg-black/60 flex items-center justify-center focus:outline-none"
+                            onClick={() => setShowAllModal(true)}
+                            aria-label={`Show all ${filteredItems.length} images`}
+                          >
+                            <span className="text-3xl font-bold text-white">+{extraCount}</span>
+                          </button>
+                        )}
+                      </div>
+                      {/* Category Badge */}
+                      <div className="absolute top-2 right-2">
+                        <span className="px-2 py-1 bg-white/90 backdrop-blur-sm text-neutral-900 text-xs font-medium rounded-full">
+                          {categories.find(cat => cat.id === item.category)?.label}
+                        </span>
                       </div>
                     </div>
+                  ))}
+            </div>
+          );
+        })()}
 
-                    {/* Hover Effect */}
-                    <div className="absolute inset-0 bg-primary-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-
-                  {/* Category Badge */}
-                  <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-neutral-900 text-xs font-medium rounded-full">
-                      {categories.find(cat => cat.id === item.category)?.label}
-                    </span>
-                  </div>
+        {/* Modal for all images */}
+        <Modal isOpen={showAllModal} onClose={() => setShowAllModal(false)} size="xlarge" title="Gallery">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-h-[70vh] overflow-y-auto">
+            {filteredItems.map((item, idx) => (
+              <div key={item.id} className="relative rounded-xl overflow-hidden cursor-zoom-in" onClick={() => setZoomIndex(idx)}>
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  loading="lazy"
+                  className="w-full h-32 sm:h-40 md:h-48 object-cover"
+                />
+                <div className="absolute bottom-1 left-1 bg-white/80 text-xs text-neutral-900 px-2 py-1 rounded">
+                  {categories.find(cat => cat.id === item.category)?.label}
                 </div>
-              ))}
-        </div>
+              </div>
+            ))}
+          </div>
+        </Modal>
+
+        {/* Image Zoom Modal with navigation */}
+        <ImageModal
+          isOpen={zoomIndex !== null}
+          onClose={() => setZoomIndex(null)}
+          src={zoomIndex !== null ? filteredItems[zoomIndex].src : ''}
+          alt={zoomIndex !== null ? filteredItems[zoomIndex].alt : ''}
+          title={zoomIndex !== null ? filteredItems[zoomIndex].title : ''}
+        >
+          {zoomIndex !== null && (
+            <div className="absolute inset-y-0 left-0 flex items-center">
+              <button
+                className="p-2 bg-black/40 text-white rounded-full hover:bg-black/70 focus:outline-none"
+                onClick={e => { e.stopPropagation(); setZoomIndex((zoomIndex - 1 + filteredItems.length) % filteredItems.length); }}
+                aria-label="Previous image"
+                disabled={filteredItems.length <= 1}
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+              </button>
+            </div>
+          )}
+          {zoomIndex !== null && (
+            <div className="absolute inset-y-0 right-0 flex items-center">
+              <button
+                className="p-2 bg-black/40 text-white rounded-full hover:bg-black/70 focus:outline-none"
+                onClick={e => { e.stopPropagation(); setZoomIndex((zoomIndex + 1) % filteredItems.length); }}
+                aria-label="Next image"
+                disabled={filteredItems.length <= 1}
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              </button>
+            </div>
+          )}
+        </ImageModal>
 
         {/* Load More Button */}
         <div className="text-center mt-16">

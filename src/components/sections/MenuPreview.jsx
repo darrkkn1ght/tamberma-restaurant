@@ -46,7 +46,7 @@ const MenuPreview = () => {
   const currentItems = menuItems[activeCategory] || [];
 
   return (
-    <section id="menu" ref={sectionRef} className="py-20 bg-gradient-to-br from-neutral-900 to-neutral-800 relative overflow-hidden">
+    <section id="menu" ref={sectionRef} className="py-10 sm:py-16 md:py-20 bg-gradient-to-br from-neutral-900 to-neutral-800 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-64 h-64 bg-orange-400 rounded-full blur-3xl" />

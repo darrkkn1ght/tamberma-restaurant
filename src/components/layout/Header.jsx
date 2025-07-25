@@ -1,32 +1,38 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation, Link } from 'react-router-dom';
+import { Phone, MapPin, ChevronDown } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Menu', href: '#menu' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Menu', dropdown: [
+        { name: 'Menu', href: '/menu' },
+        { name: 'Menu Gallery', href: '/menu-gallery' },
+      ]
+    },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'Contact', href: '/contact' },
   ];
 
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMobileMenuOpen(false);
+  const phone = '+234 805 409 0607';
+  const locationText = "Quarters 894, Rev'd Oyebode Crescent, Iyaganku, Ibadan";
+
+  const handleDropdown = (idx) => {
+    setOpenDropdown(openDropdown === idx ? null : idx);
   };
 
   return (
@@ -47,32 +53,56 @@ const Header = () => {
                 alt="Tamberma Restaurant Logo" 
                 className="h-20 w-auto drop-shadow-lg"
               />
-              {/* Optionally keep the subtitle below, or remove for a cleaner look */}
-              {/* <div>
-                <p className={`text-sm font-medium transition-colors duration-300 ${
-                  isScrolled ? 'text-accent-400' : 'text-primary-400'
-                }`}>
-                  Restaurant
-                </p>
-              </div> */}
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className={`font-medium transition-all duration-300 hover:scale-105 ${
-                  isScrolled 
-                    ? 'text-neutral-800 hover:text-primary-400' 
-                    : 'text-white hover:text-primary-400'
-                }`}
-              >
-                {item.name}
-              </button>
+          <nav className="hidden md:flex space-x-8 items-center">
+            {navItems.map((item, idx) => (
+              item.dropdown ? (
+                <div key={item.name} className="relative group">
+                  <button
+                    className={`flex items-center font-medium transition-all duration-300 hover:scale-105 ${
+                      isScrolled 
+                        ? 'text-neutral-800 hover:text-primary-400' 
+                        : 'text-white hover:text-primary-400'
+                    } ${item.dropdown.some(sub => location.pathname === sub.href) ? 'text-primary-400 font-bold underline' : ''}`}
+                    onClick={() => handleDropdown(idx)}
+                    onMouseEnter={() => setOpenDropdown(idx)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  >
+                    {item.name}
+                    <ChevronDown className="ml-1 w-4 h-4" />
+                  </button>
+                  <div className={`absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity duration-200 z-50 ${openDropdown === idx ? 'opacity-100 pointer-events-auto' : ''}`} onMouseEnter={() => setOpenDropdown(idx)} onMouseLeave={() => setOpenDropdown(null)}>
+                    {item.dropdown.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        to={sub.href}
+                        className={`block px-4 py-2 text-neutral-900 hover:bg-primary-100 hover:text-primary-500 transition-colors duration-200 ${location.pathname === sub.href ? 'text-primary-500 font-bold' : ''}`}
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`font-medium transition-all duration-300 hover:scale-105 ${
+                    isScrolled 
+                      ? 'text-neutral-800 hover:text-primary-400' 
+                      : 'text-white hover:text-primary-400'
+                  } ${location.pathname === item.href ? 'text-primary-400 font-bold underline' : ''}`}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
+            {/* Contact Info (Desktop) */}
+            {/* Removed phone and address for cleaner header */}
           </nav>
 
           {/* Reservation Button */}
@@ -89,6 +119,7 @@ const Header = () => {
               className={`p-2 rounded-lg transition-colors duration-300 ${
                 isScrolled ? 'text-neutral-900' : 'text-white'
               }`}
+              aria-label="Toggle mobile menu"
             >
               <svg
                 className="w-6 h-6"
@@ -125,20 +156,47 @@ const Header = () => {
           }`}
         >
           <div className="py-4 space-y-3 bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-lg">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-2 text-neutral-800 font-medium hover:text-primary-400 hover:bg-primary-50 transition-colors duration-200"
-              >
-                {item.name}
-              </button>
+            {navItems.map((item, idx) => (
+              item.dropdown ? (
+                <div key={item.name}>
+                  <button
+                    className={`flex items-center w-full text-neutral-800 font-medium px-4 py-2 hover:text-primary-400 hover:bg-primary-50 transition-colors duration-200 ${item.dropdown.some(sub => location.pathname === sub.href) ? 'text-primary-400 font-bold underline' : ''}`}
+                    onClick={() => handleDropdown(idx)}
+                  >
+                    {item.name}
+                    <ChevronDown className="ml-1 w-4 h-4" />
+                  </button>
+                  {openDropdown === idx && (
+                    <div className="pl-4">
+                      {item.dropdown.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          to={sub.href}
+                          className={`block px-4 py-2 text-neutral-900 hover:bg-primary-100 hover:text-primary-500 transition-colors duration-200 ${location.pathname === sub.href ? 'text-primary-500 font-bold' : ''}`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`block w-full text-left px-4 py-2 text-neutral-800 font-medium hover:text-primary-400 hover:bg-primary-50 transition-colors duration-200 ${location.pathname === item.href ? 'text-primary-400 font-bold underline' : ''}`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
-            <div className="px-4 pt-2">
-              <button className="w-full bg-primary-400 text-white py-2 rounded-full font-medium transition-all duration-300 hover:bg-primary-500">
-                Reserve Table
-              </button>
-            </div>
+            {/* Contact Info (Mobile) */}
+            {/* Removed phone and address for cleaner header */}
+            <button className="w-full bg-primary-400 text-white py-2 rounded-full font-medium transition-all duration-300 hover:bg-primary-500 mt-2">
+              Reserve Table
+            </button>
           </div>
         </div>
       </div>
