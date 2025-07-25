@@ -1,22 +1,45 @@
 {
   "name": "tamberma-restaurant",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Premium restaurant website for Tamberma - Modern React & Tailwind CSS",
   "private": true,
+  "homepage": "https://tamberma-restaurant.vercel.app",
   "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "@headlessui/react": "^2.2.6",
+    "@heroicons/react": "^2.2.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.5.2",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^10.18.0",
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-intersection-observer": "^9.5.3",
+    "react-router-dom": "^6.20.1",
     "react-scripts": "5.0.1",
+    "swiper": "^11.0.5",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "prettier": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.7",
+    "tailwindcss": "^3.4.17"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "deploy": "npm run build && vercel --prod"
   },
   "eslintConfig": {
     "extends": [
@@ -35,5 +58,27 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "restaurant",
+    "react",
+    "tailwindcss",
+    "modern",
+    "responsive",
+    "indian-cuisine",
+    "premium"
+  ],
+  "author": {
+    "name": "Tamberma Development Team",
+    "email": "dev@tamberma.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tamberma/restaurant-website.git"
   }
 }
