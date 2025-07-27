@@ -94,19 +94,133 @@
   
   /* Responsive text sizes */
   .heading-xl {
-    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl;
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl;
   }
   
   .heading-lg {
-    @apply text-3xl sm:text-4xl lg:text-5xl;
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl;
   }
   
   .heading-md {
-    @apply text-2xl sm:text-3xl lg:text-4xl;
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl;
   }
   
   .heading-sm {
+    @apply text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+  }
+
+  /* Body text responsive sizes */
+  .text-body-xs {
+    @apply text-xs sm:text-sm lg:text-base;
+  }
+
+  .text-body-sm {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  .text-body-md {
+    @apply text-base sm:text-lg lg:text-xl;
+  }
+
+  .text-body-lg {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  .text-body-xl {
     @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+
+  /* Special responsive text for hero sections */
+  .hero-title {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl;
+  }
+
+  .hero-subtitle {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+  }
+
+  /* Menu item text responsive */
+  .menu-title {
+    @apply text-xl sm:text-2xl lg:text-3xl xl:text-4xl;
+  }
+
+  .menu-price {
+    @apply text-lg sm:text-xl lg:text-2xl xl:text-3xl;
+  }
+
+  .menu-description {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  /* Card text responsive */
+  .card-title {
+    @apply text-lg sm:text-xl lg:text-2xl xl:text-3xl;
+  }
+
+  .card-subtitle {
+    @apply text-base sm:text-lg lg:text-xl;
+  }
+
+  .card-body {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  /* Button text responsive */
+  .btn-text-sm {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  .btn-text-md {
+    @apply text-base sm:text-lg lg:text-xl;
+  }
+
+  .btn-text-lg {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  /* Navigation text responsive */
+  .nav-text {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  .nav-text-lg {
+    @apply text-base sm:text-lg lg:text-xl;
+  }
+
+  /* Footer text responsive */
+  .footer-title {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  .footer-body {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  /* Testimonial text responsive */
+  .testimonial-text {
+    @apply text-base sm:text-lg lg:text-xl xl:text-2xl;
+  }
+
+  .testimonial-author {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  /* Event text responsive */
+  .event-title {
+    @apply text-lg sm:text-xl lg:text-2xl xl:text-3xl;
+  }
+
+  .event-time {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  /* Contact info text responsive */
+  .contact-title {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  .contact-info {
+    @apply text-sm sm:text-base lg:text-lg;
   }
 }
 

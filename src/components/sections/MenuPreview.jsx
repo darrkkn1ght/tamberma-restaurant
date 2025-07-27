@@ -61,10 +61,10 @@ const MenuPreview = () => {
           <span className="inline-block px-4 py-2 bg-orange-500/20 text-orange-400 rounded-full text-sm font-semibold mb-4 border border-orange-500/30">
             Our Menu
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="font-display heading-lg font-bold text-white mb-6">
             A World of <span className="text-transparent bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text">Flavors</span>
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-body-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover our multi-cuisine menu: Indian, Nigerian, Chinese, Continental, BBQ & Grill, and a full Bar. Every dish is crafted with passion and inspired by the harmony of nature and culture at Tamberma.
           </p>
         </div>
@@ -134,13 +134,13 @@ const MenuPreview = () => {
               {/* Content */}
               <div className="p-6">
                 <div className="flex justify-between items-start mb-3">
-                  <h3 className="font-display text-xl font-bold text-white group-hover:text-orange-400 transition-colors duration-300">
+                  <h3 className="font-display menu-title font-bold text-white group-hover:text-orange-400 transition-colors duration-300">
                     {item.name}
                   </h3>
-                  <span className="text-2xl font-bold text-orange-400">{item.price}</span>
+                  <span className="menu-price font-bold text-orange-400">{item.price}</span>
                 </div>
                 
-                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                <p className="menu-description text-gray-300 leading-relaxed mb-4">
                   {item.description}
                 </p>
 

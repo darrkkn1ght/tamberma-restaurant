@@ -13,7 +13,7 @@ const Location = () => (
   <section id="location" className="relative py-16 px-4 md:px-0 bg-neutral-50 overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-primary-400/10 to-accent-400/10 pointer-events-none animate-parallax" aria-hidden="true" />
     <div className="relative max-w-5xl mx-auto bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-neutral-100 p-8 md:p-12 animate-fade-in">
-      <h2 className="font-display text-3xl md:text-4xl text-primary-500 mb-6 text-center tracking-tight">Visit Us</h2>
+              <h2 className="font-display heading-md text-primary-500 mb-6 text-center tracking-tight">Visit Us</h2>
       <div className="flex flex-col md:flex-row gap-8">
         <div className="flex-1 space-y-4">
           <div>

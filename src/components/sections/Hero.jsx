@@ -61,15 +61,15 @@ export default function Hero() {
         {/* Logo and main content here */}
         <div className="transform transition-all duration-1500 translate-y-0 opacity-100 w-full flex flex-col items-center justify-center">
           {/* Main Heading */}
-          <h1 className="font-display font-bold text-white mb-6 leading-tight text-3xl md:text-5xl lg:text-7xl">
+          <h1 className="font-display font-bold text-white mb-6 leading-tight hero-title">
             <span className="block">Authentic Indian</span>
-            <span className="block text-transparent bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-3xl md:text-5xl lg:text-7xl">
+            <span className="block text-transparent bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text hero-title">
               Culinary Experience
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
+          <p className="hero-subtitle text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
             Where traditional flavors meet modern elegance. Discover premium Indian cuisine 
             paired with handcrafted cocktails in the heart of the city.
           </p>

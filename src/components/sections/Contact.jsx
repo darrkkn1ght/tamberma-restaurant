@@ -92,10 +92,10 @@ const Contact = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
           </div>
-          <h2 className="text-4xl md:text-5xl font-display text-white mb-6">
+          <h2 className="heading-lg font-display text-white mb-6">
             Get In <span className="text-primary-400">Touch</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-body-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Ready to experience exceptional Indian cuisine? Whether you have questions, 
             special requests, or want to make a reservation, we're here to help.
           </p>

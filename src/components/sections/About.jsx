@@ -94,10 +94,10 @@ const About = () => {
           <span className="inline-block px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-semibold mb-4">
             Our Story
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
+          <h2 className="font-display heading-lg font-bold text-neutral-900 mb-6">
             Nature, Culture & <span className="text-orange-500">Cuisine</span>
           </h2>
-          <p className="text-lg text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-body-lg text-neutral-600 max-w-3xl mx-auto leading-relaxed">
             Tamberma Restaurant & Bar is where nature and food exist in harmony. Our serene, naturistic space is infused with African culture, offering a unique dining experience for families and individuals. We celebrate a multi-cuisine journey—Indian, Nigerian, Chinese, Continental, BBQ & Grill—crafted with passion, authenticity, and a love for quality.
           </p>
         </div>
@@ -108,13 +108,13 @@ const About = () => {
           <div className={`transform transition-all duration-1000 delay-300 ${
             isVisible ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'
           }`}>
-            <h3 className="font-display text-3xl font-bold text-neutral-900 mb-6">
+            <h3 className="font-display heading-md font-bold text-neutral-900 mb-6">
               A Multi-Cuisine Experience in a Naturistic Setting
             </h3>
-            <p className="text-neutral-600 mb-6 leading-relaxed">
+            <p className="text-body-md text-neutral-600 mb-6 leading-relaxed">
               Founded in Ibadan, Tamberma is a destination for those seeking a blend of African-inspired ambiance and a world of flavors. Our menu features Indian classics, Nigerian favorites, Chinese specialties, Continental delights, and BBQ & Grill—all prepared with the finest ingredients and a focus on quality.
             </p>
-            <p className="text-neutral-600 mb-8 leading-relaxed">
+            <p className="text-body-md text-neutral-600 mb-8 leading-relaxed">
               Whether you crave tandoori chicken, Singapore noodles, chicken suya pizza, or a signature cocktail, Tamberma is dedicated to delivering an unforgettable dining experience. Join us to immerse yourself in the beauty of Tamberma—where every meal is a celebration of culture, nature, and taste.
             </p>
 

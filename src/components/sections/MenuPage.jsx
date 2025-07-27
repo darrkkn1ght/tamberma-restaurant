@@ -126,7 +126,7 @@ const MenuPage = () => {
 
   return (
     <div className="max-w-4xl mx-auto py-12 px-4">
-      <h1 className="text-4xl font-display font-bold text-center text-primary-500 mb-4">Our Menu</h1>
+              <h1 className="heading-lg font-display font-bold text-center text-primary-500 mb-4">Our Menu</h1>
       <p className="text-center text-lg text-neutral-600 mb-10">Explore our diverse menu categories. Tap a menu to zoom in or scroll down to search and browse all dishes.</p>
       {/* Menu Images Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">

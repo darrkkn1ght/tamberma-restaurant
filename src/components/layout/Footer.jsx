@@ -58,10 +58,10 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="lg:col-span-1">
               <div className="mb-6">
-                <h3 className="font-display text-2xl font-bold text-primary-400 mb-2">
+                <h3 className="font-display footer-title font-bold text-primary-400 mb-2">
                   Tamberma
                 </h3>
-                <p className="text-neutral-300 text-sm leading-relaxed">
+                <p className="footer-body text-neutral-300 leading-relaxed">
                   Premium Indian cuisine meets craft cocktails in an atmosphere of modern elegance. 
                   Experience the art of fine dining with authentic flavors and innovative presentations.
                 </p>
