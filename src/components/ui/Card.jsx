@@ -80,10 +80,10 @@ const CardHeader = ({ children, className = '', ...props }) => {
 // Card Title Component
 const CardTitle = ({ children, className = '', size = 'default', ...props }) => {
   const sizes = {
-    sm: 'card-title font-display font-semibold',
-    default: 'card-title font-display font-semibold',
-    lg: 'card-title font-display font-bold',
-    xl: 'card-title font-display font-bold'
+    sm: 'text-lg font-display font-semibold',
+    default: 'text-xl font-display font-semibold',
+    lg: 'text-2xl font-display font-bold',
+    xl: 'text-3xl font-display font-bold'
   };
   
   return (
@@ -96,7 +96,7 @@ const CardTitle = ({ children, className = '', size = 'default', ...props }) => 
 // Card Description Component
 const CardDescription = ({ children, className = '', ...props }) => {
   return (
-    <p className={`card-body text-neutral-600 leading-relaxed ${className}`} {...props}>
+    <p className={`text-neutral-600 leading-relaxed ${className}`} {...props}>
       {children}
     </p>
   );

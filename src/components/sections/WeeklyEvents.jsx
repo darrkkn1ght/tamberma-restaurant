@@ -38,7 +38,7 @@ const WeeklyEvents = () => {
           </button>
         </div>
       )}
-              <h2 className="heading-md font-bold text-center text-orange-600 mb-8">Our Weekly Events</h2>
+              <h2 className="text-3xl font-bold text-center text-orange-600 mb-8">Our Weekly Events</h2>
       {/* Events Grid */}
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {weeklyEvents.map((e, i) => (
