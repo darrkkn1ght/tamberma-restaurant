@@ -112,22 +112,12 @@ export default function ReservationDrawer() {
         if (!validate()) return
 
         setIsSubmitting(true)
-        try {
-            const res = await fetch('/api/reserve', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            })
-            const data = await res.json()
-            if (data.ok) {
-                setStep('success')
-            }
-        } catch {
-            // On error, still show success with WhatsApp fallback
-            setStep('success')
-        } finally {
+
+        // Simulate API call for UX feeling
+        setTimeout(() => {
             setIsSubmitting(false)
-        }
+            setStep('success')
+        }, 1500)
     }
 
     const getWhatsAppLink = () => {
