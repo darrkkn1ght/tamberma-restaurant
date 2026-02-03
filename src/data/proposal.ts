@@ -120,7 +120,7 @@ export const proposalData = {
         }
     ],
     contact: {
-        whatsapp: "2340000000000", // Replace with real number from config
+        whatsapp: "2348129744447",
         email: "info@nccdigital.com"
     }
 };
