@@ -42,11 +42,11 @@ export default function Footer() {
                         <ul className="space-y-4 text-neutral-600 text-sm">
                             <li className="flex items-start space-x-3">
                                 <MapPin size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                                <span>Rev'd Boyer Road, University of Ibadan, Ibadan, Nigeria</span>
+                                <span>Rev&apos;d Oyebode Crescent, Iyaganku GRA, Ibadan, Nigeria</span>
                             </li>
                             <li className="flex items-center space-x-3">
                                 <Phone size={18} className="text-primary flex-shrink-0" />
-                                <span>+234 800 000 0000</span>
+                                <span>+234 807 559 0939</span>
                             </li>
                             <li className="flex items-center space-x-3">
                                 <Mail size={18} className="text-primary flex-shrink-0" />
@@ -61,15 +61,11 @@ export default function Footer() {
                         <ul className="space-y-3 text-neutral-600 text-sm">
                             <li className="flex justify-between border-b border-neutral-200 pb-2">
                                 <span>Mon - Thu</span>
-                                <span>12:00 PM - 10:00 PM</span>
+                                <span>11:00 AM - 11:00 PM</span>
                             </li>
                             <li className="flex justify-between text-neutral-900 border-b border-neutral-200 pb-2 font-medium">
-                                <span>Fri - Sat</span>
-                                <span>12:00 PM - 11:00 PM</span>
-                            </li>
-                            <li className="flex justify-between">
-                                <span>Sunday</span>
-                                <span>11:00 AM - 10:00 PM</span>
+                                <span>Fri - Sun</span>
+                                <span>11:00 AM - 12:00 AM</span>
                             </li>
                         </ul>
                     </div>

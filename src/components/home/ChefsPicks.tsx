@@ -2,12 +2,30 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
-import { getFeaturedItems, formatPrice } from '@/data/menu'
+import { getFeaturedItems, getAllMenuItems, formatPrice, type MenuItem } from '@/data/menu'
 import SectionHeader from '@/components/ui/SectionHeader'
 
 export default function ChefsPicks() {
-    // Get top 4 featured items
-    const featuredItems = getFeaturedItems().slice(0, 4)
+    // Specific popular items based on research
+    const targetIds = [
+        'salads_tamberma_special_chef_salad', // Signature Salad
+        'ind_chicken_butter_chicken',         // Popular Indian
+        'cont_lamb_chops_mashed_potatoes',    // High-end Grill
+        'ng_seafood_okro'                     // Premium Nigerian
+    ]
+
+    // Find items, fallback to default featured if not found
+    const allItems = getFeaturedItems()
+    const featuredItems = targetIds
+        .map(id => allItems.find(item => item.id === id) || getAllMenuItems().find(item => item.id === id))
+        .filter(Boolean)
+        .slice(0, 4) as MenuItem[]
+
+    // Fallback if specific search failed (shouldn't happen with correct IDs)
+    if (featuredItems.length < 4) {
+        const remaining = getFeaturedItems().filter(item => !featuredItems.includes(item)).slice(0, 4 - featuredItems.length)
+        featuredItems.push(...remaining)
+    }
 
     return (
         <section className="py-20 bg-white">

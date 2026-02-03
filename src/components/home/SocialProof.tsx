@@ -5,15 +5,15 @@ const stats = [
     {
         id: 1,
         label: "Google Rating",
-        value: "4.8",
+        value: "4.3",
         icon: Star,
-        caption: "Based on 500+ reviews",
+        caption: "Based on 1,575+ reviews",
         color: "text-amber-500"
     },
     {
         id: 2,
         label: "Happy Guests",
-        value: "15k+",
+        value: "20k+",
         icon: Users,
         caption: "Served annually",
         color: "text-primary"
@@ -21,7 +21,7 @@ const stats = [
     {
         id: 3,
         label: "Events Hosted",
-        value: "200+",
+        value: "500+",
         icon: Calendar,
         caption: "Memorable celebrations",
         color: "text-blue-500"
@@ -29,9 +29,9 @@ const stats = [
     {
         id: 4,
         label: "Community",
-        value: "10k",
+        value: "10k+",
         icon: Instagram,
-        caption: "Followers on Instagram",
+        caption: "Followers across socials",
         color: "text-pink-600"
     }
 ]
