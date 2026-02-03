@@ -57,6 +57,9 @@ export default function Hero() {
                             View Menu
                         </Link>
                     </div>
+                    <p className="mt-6 text-xs md:text-sm text-neutral-300 font-light tracking-wide opacity-80">
+                        Instant confirmation via WhatsApp
+                    </p>
                 </MotionDiv>
             </div>
 
