@@ -1,0 +1,434 @@
+Category | Subcategory | Item Name | Size | Price (₦)
+
+You can paste this directly into Sheets.
+
+=========================
+🇮🇳 INDIAN MENU
+=========================
+Soup
+
+Indian | Soup | Manchow Soup | Veg | 7000
+Indian | Soup | Manchow Soup | Chicken | 7000
+Indian | Soup | Hot & Sour Soup | Veg | 7000
+Indian | Soup | Hot & Sour Soup | Chicken | 7000
+
+Veg Appetizers
+
+Indian | Veg Appetizers | Veg Samosa | 4 pcs | 7500
+Indian | Veg Appetizers | Veg Pakora | Regular | 7500
+Indian | Veg Appetizers | Hara Bara Kebab | 4 pcs | 7500
+Indian | Veg Appetizers | Corn Tikka | 4 pcs | 7500
+Indian | Veg Appetizers | Chilli Milli Kebab | Regular | 7500
+Indian | Veg Appetizers | Schezwan Mushroom Dry | Regular | 11000
+Indian | Veg Appetizers | Gobi Manchurian | Regular | 11000
+Indian | Veg Appetizers | Crispy Chilli Baby Corn | Regular | 11000
+Indian | Veg Appetizers | Mushroom Chilli | Regular | 11000
+Indian | Veg Appetizers | 3 in 1 (Mushroom Baby Corn) | Regular | 11000
+Indian | Veg Appetizers | Chilli Paneer Dry | Regular | 12500
+
+Chicken / Mutton Starters
+
+Indian | Chicken/Mutton | Chicken Manchurian | Regular | 10500
+Indian | Chicken/Mutton | Chicken Salt & Pepper | Regular | 10500
+Indian | Chicken/Mutton | Chilli Chicken | Regular | 10500
+Indian | Chicken/Mutton | Chicken 65 | Regular | 10500
+Indian | Chicken/Mutton | Chicken Pakoda | Regular | 10500
+Indian | Chicken/Mutton | Dragon Chicken | Regular | 10500
+Indian | Chicken/Mutton | Chicken Lollipop | 6 pcs | 10500
+Indian | Chicken/Mutton | Schezwan Chicken | Regular | 10500
+Indian | Chicken/Mutton | Mutton Pepper Fry | Regular | 14500
+
+Fish & Prawns (Indian)
+
+Indian | Fish & Prawns | Apollo Fish | Regular | 15500
+Indian | Fish & Prawns | Chilli Fish | Regular | 15500
+Indian | Fish & Prawns | Fish Koliwada | Regular | 15500
+Indian | Fish & Prawns | Andhra Prawns Fry | Regular | 21000
+Indian | Fish & Prawns | Prawns Koliwada | Regular | 21000
+Indian | Fish & Prawns | Chilli / Schezwan Prawns | Regular | 21000
+
+Dal Zaikedar
+
+Indian | Dal | Dal Makhani | Regular | 8000
+Indian | Dal | Dal Dhaba | Regular | 8000
+Indian | Dal | Dal Kolhapuri | Regular | 8000
+Indian | Dal | Yellow Dal Tadka | Regular | 8000
+
+Veg Curries
+
+Indian | Veg Curries | Subzi Jalfrazi | Regular | 9700
+Indian | Veg Curries | Subzi Handi Diwani | Regular | 9700
+Indian | Veg Curries | Subzi Kolhapuri | Regular | 9700
+Indian | Veg Curries | Mushroom Kadai | Regular | 9700
+Indian | Veg Curries | Veg Lazawab | Regular | 9700
+Indian | Veg Curries | Mushroom Mutter Masala | Regular | 9700
+Indian | Veg Curries | Malai Methi Mutter | Regular | 9700
+Indian | Veg Curries | Malai Kofta | Regular | 9700
+
+Paneer Bahar
+
+Indian | Paneer | Paneer Bhurji | Regular | 12000
+Indian | Paneer | Paneer Palak | Regular | 12000
+Indian | Paneer | Paneer Kadhai | Regular | 12000
+Indian | Paneer | Paneer Handi | Regular | 12000
+Indian | Paneer | Paneer Makhanwala | Regular | 12000
+Indian | Paneer | Paneer Malai Kofta | Regular | 12000
+Indian | Paneer | Paneer Mutter | Regular | 12000
+
+Murg Ki Mehfil (Chicken Curries)
+
+Indian | Chicken Curry | Murg Kadai | Regular | 12000
+Indian | Chicken Curry | Butter Chicken | Regular | 12000
+Indian | Chicken Curry | Murg Kolhapuri | Regular | 12000
+Indian | Chicken Curry | Murg Hyderabadi | Regular | 12000
+Indian | Chicken Curry | Murg Chetinad | Regular | 12000
+Indian | Chicken Curry | Murg Kali Mirch | Regular | 12000
+Indian | Chicken Curry | Tamberma Special Murg | Regular | 12000
+Indian | Chicken Curry | Murg Tawa Masala | Regular | 12000
+Indian | Chicken Curry | Murg Tikka Masala | Regular | 12000
+
+Gosht Ka Kammal (Mutton Curries)
+
+Indian | Mutton Curry | Gosht Handi | Regular | 15000
+Indian | Mutton Curry | Gosht Muglai | Regular | 15000
+Indian | Mutton Curry | Gosht Kadai | Regular | 15000
+Indian | Mutton Curry | Bhuna Gosht | Regular | 15000
+Indian | Mutton Curry | Kheem Hyderabadi | Regular | 15000
+Indian | Mutton Curry | Gosht Roganjosh | Regular | 15000
+
+Rice
+
+Indian | Rice | Jeera Rice | Regular | 7500
+Indian | Rice | Boiled Basmati Rice | Regular | 7000
+Indian | Rice | Egg/Veg Biryani | Regular | 11000
+Indian | Rice | Chicken/Chicken Tikka Biryani | Regular | 14500
+Indian | Rice | Mutton Biryani | Regular | 15500
+Indian | Rice | Prawn Biryani | Regular | 19500
+
+Bread
+
+Indian | Bread | Tandoori Roti | Regular | 1700
+Indian | Bread | Naan Plain | Regular | 1700
+Indian | Bread | Naan Butter | Regular | 1900
+Indian | Bread | Naan Garlic | Regular | 2100
+Indian | Bread | Kulcha Masala | Regular | 3000
+Indian | Bread | Cheese Naan | Regular | 5200
+Indian | Bread | Cheese Chilli Garlic Naan | Regular | 5500
+
+Accompaniments
+
+Indian | Accompaniments | Masala Papad | Regular | 3000
+Indian | Accompaniments | Plain Papad | Regular | 3000
+Indian | Accompaniments | Cucumber Raita | Regular | 3500
+Indian | Accompaniments | Onion Salad | Regular | 3500
+Indian | Accompaniments | Plain Raita | Regular | 3500
+Indian | Accompaniments | Fresh Green Salad | Regular | 4000
+Indian | Accompaniments | Peanut Masala | Regular | 4000
+
+⚠️ NOTE
+
+Prices are exclusive of 7.5% VAT (as stated on menu).
+
+Ordering sequence preserved per category.
+
+Category | Subcategory | Item Name | Size | Price (₦)
+
+=========================
+🇨🇳 CHINESE MENU
+=========================
+Starters
+
+Chinese | Starters | Spring Roll | Veg (Per Piece) | 1200
+Chinese | Starters | Spring Roll | Chicken (Per Piece) | 1400
+Chinese | Starters | Samosa | Chicken/Beef (Per Piece) | 1400
+Chinese | Starters | Spring Roll Mayo & Shrimps | Regular | 2800
+Chinese | Starters | Steamed Dumplings | Chicken (4 pcs) | 6600
+Chinese | Starters | Steamed Dumplings | Prawns | 8000
+Chinese | Starters | Pan Fried Dumplings | Chicken | 6000
+Chinese | Starters | Pan Fried Dumplings | Prawns | 8000
+Chinese | Starters | Butterfly Prawns | Medium | 10000
+
+Soups
+
+Chinese | Soup | Sweet Corn Soup | Veg | 9000
+Chinese | Soup | Sweet Corn Soup | Chicken | 9000
+Chinese | Soup | Peking Soup | Veg | 9000
+Chinese | Soup | Peking Soup | Chicken | 9000
+Chinese | Soup | Seafood Creamy Soup | Regular | 15000
+
+Main Course — Chicken
+
+Chinese | Main Course Chicken | Chicken in Black Bean Sauce | Medium | 14000
+Chinese | Main Course Chicken | Chicken in Black Bean Sauce | Large | 17000
+Chinese | Main Course Chicken | Diced Chicken in Chilli Sauce | Medium | 14000
+Chinese | Main Course Chicken | Diced Chicken in Chilli Sauce | Large | 17000
+Chinese | Main Course Chicken | Diced Chicken in Curry Sauce | Medium | 14000
+Chinese | Main Course Chicken | Diced Chicken in Curry Sauce | Large | 17000
+Chinese | Main Course Chicken | Chicken in Hot Plate | Medium | 14000
+Chinese | Main Course Chicken | Chicken in Hot Plate | Large | 17000
+Chinese | Main Course Chicken | Mongolian Chicken | Medium | 14000
+Chinese | Main Course Chicken | Mongolian Chicken | Large | 17000
+Chinese | Main Course Chicken | Sweet & Sour Chicken | Medium | 14000
+Chinese | Main Course Chicken | Sweet & Sour Chicken | Large | 17000
+Chinese | Main Course Chicken | Chicken & Broccoli | Medium | 14000
+Chinese | Main Course Chicken | Chicken & Broccoli | Large | 17000
+
+Main Course — Beef
+
+Chinese | Main Course Beef | Shredded Beef with Green Pepper | Medium | 14000
+Chinese | Main Course Beef | Shredded Beef with Green Pepper | Large | 17000
+Chinese | Main Course Beef | Beef in Black Bean Sauce (HP) | Medium | 14000
+Chinese | Main Course Beef | Beef in Black Pepper (HP) | Medium | 14000
+Chinese | Main Course Beef | Beef in Oyster Sauce (HP) | Medium | 14000
+Chinese | Main Course Beef | Mongolian Beef | Medium | 14000
+Chinese | Main Course Beef | Stir Fried Beef & Broccoli | Medium | 14000
+
+Main Course — Lamb
+
+Chinese | Main Course Lamb | Sliced Lamb with Spring Onion & Ginger | Medium | 16000
+Chinese | Main Course Lamb | Sliced Lamb with Spring Onion & Ginger | Large | 19000
+Chinese | Main Course Lamb | Diced Lamb with Spicy Sauce | Medium | 16000
+Chinese | Main Course Lamb | Diced Lamb with Spicy Sauce | Large | 19000
+Chinese | Main Course Lamb | Lamb in Hot Plate | Medium | 16000
+Chinese | Main Course Lamb | Lamb in Hot Plate | Large | 19000
+
+Fish
+
+Chinese | Fish | Sliced Fish in Chilli Sauce | Medium | 18000
+Chinese | Fish | Sliced Fish in Chilli Sauce | Large | 21000
+Chinese | Fish | Fish in Hot Plate | Medium | 18000
+Chinese | Fish | Fish in Hot Plate | Large | 21000
+Chinese | Fish | Steamed Whole Fish with Vegetables | Regular | 21000
+Chinese | Fish | Whole Fish in Sweet & Sour Sauce | Regular | 21000
+
+Prawns
+
+Chinese | Prawns | Prawns in Chilli Sauce | Medium | 22000
+Chinese | Prawns | Prawns in Chilli Sauce | Large | 25000
+Chinese | Prawns | Prawns in Black Bean Sauce | Medium | 22000
+Chinese | Prawns | Prawns in Black Bean Sauce | Large | 25000
+Chinese | Prawns | Prawns in Oyster Sauce | Medium | 22000
+Chinese | Prawns | Prawns in Oyster Sauce | Large | 25000
+Chinese | Prawns | Prawns in Hot Plate | Medium | 22000
+Chinese | Prawns | Prawns in Hot Plate | Large | 25000
+
+Noodles
+
+Chinese | Noodles | Singapore Noodles | Vegetarian Medium | 12000
+Chinese | Noodles | Singapore Noodles | Vegetarian Large | 14000
+Chinese | Noodles | Singapore Noodles | Chicken Medium | 12500
+Chinese | Noodles | Singapore Noodles | Chicken Large | 14500
+Chinese | Noodles | Singapore Noodles | Beef Medium | 12500
+Chinese | Noodles | Singapore Noodles | Beef Large | 14500
+Chinese | Noodles | Singapore Noodles | Shrimps Medium | 14000
+Chinese | Noodles | Singapore Noodles | Shrimps Large | 16500
+Chinese | Noodles | Singapore Noodles | Seafood Medium | 16000
+Chinese | Noodles | Singapore Noodles | Seafood Large | 19000
+
+Rice
+
+Chinese | Rice | Steamed Rice | Medium | 7500
+Chinese | Rice | Steamed Rice | Large | 9000
+Chinese | Rice | Veg Fried Rice | Medium | 10000
+Chinese | Rice | Veg Fried Rice | Large | 12500
+Chinese | Rice | Egg Fried Rice | Medium | 10000
+Chinese | Rice | Egg Fried Rice | Large | 12500
+Chinese | Rice | Beef Fried Rice | Medium | 11000
+Chinese | Rice | Beef Fried Rice | Large | 13500
+Chinese | Rice | Chicken Fried Rice | Medium | 11000
+Chinese | Rice | Chicken Fried Rice | Large | 13500
+Chinese | Rice | Shrimp Fried Rice | Medium | 12000
+Chinese | Rice | Shrimp Fried Rice | Large | 15000
+Chinese | Rice | Special Fried Rice | Medium | 13500
+Chinese | Rice | Special Fried Rice | Large | 17500
+
+=========================
+🔥 GRILL HOUSE
+=========================
+Vegetarian BBQ
+
+Grill House | Vegetarian | Paneer Tikka | Regular | 12500
+Grill House | Vegetarian | Stuffed Tandoori Potato | Regular | 12500
+Grill House | Vegetarian | Tandoori Sabji | Regular | 12500
+Grill House | Vegetarian | Veg Seekh Kebab | Regular | 10500
+Grill House | Vegetarian | Kasturi Paneer Tikka | Regular | 12500
+Grill House | Vegetarian | Malai Paneer Tikka | Regular | 12500
+
+Chicken BBQ
+
+Grill House | Chicken | Tandoori Chicken | Half | 14500
+Grill House | Chicken | Tandoori Chicken | Full | 19500
+Grill House | Chicken | Awadhi Chicken Tikka | Regular | 12000
+Grill House | Chicken | Chicken Reshmi Kebab | Regular | 12000
+Grill House | Chicken | Chicken Malwani Tikka | Regular | 12000
+Grill House | Chicken | Seekh Kebab Chicken | Regular | 12000
+Grill House | Chicken | Chicken Pahadi Tikka | Regular | 12000
+
+Mutton
+
+Grill House | Mutton | Galouti Kebab | Regular | 18500
+Grill House | Mutton | Sheekh Kebab Mutton | Regular | 18500
+
+Fish
+
+Grill House | Fish | Fish Tikka | Regular | 17500
+Grill House | Fish | Fish Reshmi Kebab | Regular | 17500
+Grill House | Fish | Sarson Fish Tikka | Regular | 17500
+Grill House | Fish | Achari Fish Tikka | Regular | 17500
+
+Prawns
+
+Grill House | Prawns | Tandoori Prawns | Regular | 23000
+Grill House | Prawns | Tandoori Butter Garlic Prawns | Regular | 23000
+Grill House | Prawns | Achari Prawns | Regular | 23000
+Grill House | Prawns | Kandhari Prawns | Regular | 23000
+
+Nigerian Grill
+
+Grill House | Nigerian Grill | BBQ Chicken | Half | 14500
+Grill House | Nigerian Grill | BBQ Chicken | Full | 19500
+Grill House | Nigerian Grill | Cat Fish | Regular | 18000
+Grill House | Nigerian Grill | Croaker | Regular | 19500
+
+Suya
+
+Grill House | Suya | Beef Suya | Regular | 6000
+Grill House | Suya | Chicken Suya | Regular | 9000
+
+=========================
+🇳🇬 NIGERIAN MENU
+=========================
+Appetizers
+
+Nigerian | Appetizers | Peppered Chicken | Regular | 9000
+Nigerian | Appetizers | Asun | Regular | 10000
+Nigerian | Appetizers | Peppered Gizzard | Regular | 10000
+Nigerian | Appetizers | Peppered Beef | Regular | 10000
+Nigerian | Appetizers | Peppered Goat Meat | Regular | 10000
+Nigerian | Appetizers | Peppered Wings | Regular | 11000
+Nigerian | Appetizers | Peppered Turkey Wings | Regular | 13000
+Nigerian | Appetizers | Peppered Snail | Regular | 15000
+Nigerian | Appetizers | Nkwobi (Ponmo) | Regular | 16000
+Nigerian | Appetizers | Isi Ewu | Regular | 17000
+Nigerian | Appetizers | Peppered Prawns | Regular | 19000
+
+Swallow
+
+Nigerian | Swallow | Wheat/Semo/Amala | Regular | 3000
+Nigerian | Swallow | Eba/Starch | Regular | 3000
+Nigerian | Swallow | Poundo | Regular | 3200
+
+Protein
+
+Nigerian | Protein | Chicken | Regular | 8000
+Nigerian | Protein | Goat Meat | Regular | 10000
+Nigerian | Protein | Beef | Regular | 10000
+Nigerian | Protein | Fish (Croaker) | Regular | 13000
+Nigerian | Protein | Turkey | Regular | 13000
+Nigerian | Protein | Seafood | Regular | 18000
+
+Rice
+
+Nigerian | Rice | Jollof Rice Combo | Regular | 11000
+Nigerian | Rice | Fried Rice Combo | Regular | 11000
+Nigerian | Rice | Seafood Fried Rice | Regular | 14000
+
+Extras
+
+Nigerian | Extras | Coleslaw Salad | Regular | 4000
+Nigerian | Extras | Yam Chips | Regular | 5500
+Nigerian | Extras | French Fries | Regular | 5500
+Nigerian | Extras | Plantain Chips | Regular | 5500
+Nigerian | Extras | Basmati Rice | Regular | 6000
+Nigerian | Extras | Jollof Rice | Regular | 6000
+Nigerian | Extras | Fried Rice | Regular | 6000
+Nigerian | Extras | Chicken & Chips | Regular | 14000
+
+=========================
+🍕 PIZZA MENU
+=========================
+
+Pizza | Pizza | Margarita | Medium | 11500
+Pizza | Pizza | Margarita | Large | 13500
+Pizza | Pizza | Vegetarian | Medium | 12500
+Pizza | Pizza | Vegetarian | Large | 15000
+Pizza | Pizza | Hawaiian | Medium | 14000
+Pizza | Pizza | Hawaiian | Large | 16500
+Pizza | Pizza | Chicken & Mushroom | Medium | 14000
+Pizza | Pizza | Chicken & Mushroom | Large | 16500
+Pizza | Pizza | Sweet Chilli Chicken | Medium | 14000
+Pizza | Pizza | Sweet Chilli Chicken | Large | 16500
+Pizza | Pizza | Shrimp Suya Pizza | Medium | 16000
+Pizza | Pizza | Shrimp Suya Pizza | Large | 20000
+Pizza | Pizza | Chicken Tikka | Regular | 17000
+Pizza | Pizza | Butter Chicken | Regular | 17000
+Pizza | Pizza | Chicken Triple Decker | Regular | 24500
+Pizza | Pizza | Meat Triple Decker | Regular | 24500
+Pizza | Pizza | Chicken Crammed Crust | Regular | 20000
+Pizza | Pizza | Meaty Crammed Crust | Regular | 20000
+
+=========================
+🌍 CONTINENTAL MENU
+=========================
+Soups
+
+Continental | Soup | Tomato Basil Soup | Regular | 9000
+Continental | Soup | Spicy Coconut Shrimp Soup | Regular | 13000
+Continental | Soup | Seafood Soup | Regular | 15000
+
+Salads
+
+Continental | Salad | Caesar Salad Chicken | Regular | 14000
+Continental | Salad | Tamberma Special Chef Salad | Regular | 16000
+
+Pasta
+
+Continental | Pasta | Alfredo Pasta Chicken | Regular | 16000
+Continental | Pasta | Alfredo Pasta Seafood | Regular | 18000
+Continental | Pasta | Arrabbiata Pasta with Grilled Chicken | Regular | 16000
+Continental | Pasta | Beef Lasagna | Regular | 16000
+Continental | Pasta | Spaghetti with Meatballs | Regular | 16000
+Continental | Pasta | Spaghetti Bolognese | Regular | 16000
+Continental | Pasta | Mac & Cheese Chicken | Regular | 20000
+Continental | Pasta | Mac & Cheese Prawns | Regular | 25000
+
+Mains
+
+Continental | Main | Chicken Escalope | Regular | 18500
+Continental | Main | Chicken Red Curry with Rice | Regular | 18500
+Continental | Main | Grilled Chicken & Chips with Salad | Regular | 18500
+Continental | Main | Slow Braised Lamb with Jack Daniel Sauce | Regular | 28000
+Continental | Main | Lamb Chops with Mashed Potatoes | Regular | 32000
+Continental | Main | Beef Stroganoff with Mashed Potatoes | Regular | 24000
+Continental | Main | Jack Daniels Steak with Roasted Potatoes | Regular | 24000
+Continental | Main | Beef Steak with Creamy Mushroom Sauce | Regular | 24000
+
+Seafood
+
+Continental | Seafood | Pan Fried Sole Filet | Regular | 23000
+Continental | Seafood | Beer Battered Fish | Regular | 23000
+Continental | Seafood | Pan Fried Fish Fillet Coconut Rice | Regular | 23000
+Continental | Seafood | Prawns in Spicy Coconut Sauce | Regular | 28000
+Continental | Seafood | Grilled Tiger Prawns | Regular | 32000
+Continental | Seafood | Pineapple Rice Prawns | Regular | 28000
+
+Subs & Wraps
+
+Continental | Subs & Wraps | Philly Cheese Steak Sandwich | Regular | 12000
+Continental | Subs & Wraps | Club Sandwich | Regular | 12000
+Continental | Subs & Wraps | Assorted Shawarma | Regular | 8000
+Continental | Subs & Wraps | Chicken Shawarma | Regular | 8000
+Continental | Subs & Wraps | Beef Shawarma | Regular | 8000
+
+Desserts
+
+Continental | Dessert | Brownie with Ice Cream | Regular | 12000
+Continental | Dessert | Blueberry Cheesecake | Regular | 12000
+Continental | Dessert | Tiramisu | Regular | 12000
+
+Platters
+
+Continental | Platter | Tamberma Special Mixed Platter | Regular | 40000
+Continental | Platter | Chairman Mixed Kebab Platter | Regular | 30000
+
+updated prices

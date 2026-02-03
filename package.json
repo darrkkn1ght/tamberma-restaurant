@@ -1,0 +1,86 @@
+{
+  "name": "tamberma-restaurant",
+  "version": "1.0.0",
+  "description": "Premium restaurant website for Tamberma - Modern React & Tailwind CSS",
+  "private": true,
+  "homepage": "https://tamberma-restaurant.vercel.app",
+  "dependencies": {
+    "@headlessui/react": "^2.2.6",
+    "@heroicons/react": "^2.2.0",
+    "@types/node": "^25.2.0",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "clsx": "^2.1.1",
+    "emailjs-com": "^3.2.0",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.6",
+    "framer-motion": "^10.18.0",
+    "lucide-react": "^0.294.0",
+    "next": "^16.1.6",
+    "next-themes": "^0.4.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-helmet-async": "^2.0.5",
+    "react-icons": "^4.12.0",
+    "react-intersection-observer": "^9.5.3",
+    "swiper": "^11.0.5",
+    "tailwind-merge": "^3.4.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "prettier": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.7",
+    "tailwindcss": "^3.4.19"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "restaurant",
+    "react",
+    "tailwindcss",
+    "modern",
+    "responsive",
+    "indian-cuisine",
+    "premium"
+  ],
+  "author": {
+    "name": "Tamberma Development Team",
+    "email": "dev@tamberma.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tamberma/restaurant-website.git"
+  }
+}

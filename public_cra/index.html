@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e67e22" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tamberma Restaurant - Premium Indian cuisine with craft cocktails. Experience authentic flavors in a modern, sophisticated setting. Book your table today." />
+    <meta name="keywords" content="Indian restaurant, craft cocktails, fine dining, authentic Indian cuisine, premium restaurant, cocktail bar, Tamberma" />
+    <meta name="author" content="Tamberma Restaurant" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tamberma-restaurant.vercel.app/" />
+    <meta property="og:title" content="Tamberma Restaurant - Premium Indian Cuisine & Craft Cocktails" />
+    <meta property="og:description" content="Experience authentic Indian flavors paired with expertly crafted cocktails in our modern, sophisticated setting." />
+    <meta property="og:image" content="%PUBLIC_URL%/images/gallery/hero-bg.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://tamberma-restaurant.vercel.app/" />
+    <meta property="twitter:title" content="Tamberma Restaurant - Premium Indian Cuisine & Craft Cocktails" />
+    <meta property="twitter:description" content="Experience authentic Indian flavors paired with expertly crafted cocktails in our modern, sophisticated setting." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/images/gallery/hero-bg.jpg" />
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/logo/tamberma-icon.svg" />
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts - Premium Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Preload Critical Images -->
+    <link rel="preload" href="%PUBLIC_URL%/images/gallery/hero-bg.jpg" as="image" type="image/jpeg">
+    <link rel="preload" href="%PUBLIC_URL%/images/logo/tamberma-logo.png" as="image" type="image/png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Tamberma Restaurant",
+      "image": "%PUBLIC_URL%/images/gallery/hero-bg.jpg",
+      "description": "Premium Indian cuisine with craft cocktails in a modern, sophisticated setting.",
+      "servesCuisine": "Indian",
+      "priceRange": "$$-$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Culinary Street",
+        "addressLocality": "Downtown",
+        "addressRegion": "State",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-555-TAMBERMA",
+      "url": "https://tamberma-restaurant.vercel.app",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "17:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday"],
+          "opens": "17:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "16:00",
+          "closes": "21:00"
+        }
+      ]
+    }
+    </script>
+    
+    <title>Tamberma Restaurant - Premium Indian Cuisine & Craft Cocktails</title>
+    
+    <!-- Critical CSS for Performance -->
+    <style>
+        /* Critical above-the-fold styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #fafafa;
+        }
+        
+        /* Loading spinner */
+        .loading-spinner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border: 3px solid #f5f5f5;
+            border-top: 3px solid #e67e22;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            z-index: 9999;
+        }
+        
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        /* Hide loading spinner when React loads */
+        .loaded .loading-spinner {
+            display: none;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Focus styles for accessibility */
+        *:focus {
+            outline: 2px solid #e67e22;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>
+        <div style="padding: 40px; text-align: center; font-family: Inter, sans-serif;">
+            <h1 style="color: #e67e22; margin-bottom: 20px;">Tamberma Restaurant</h1>
+            <p style="font-size: 18px; color: #666;">
+                You need to enable JavaScript to experience our premium restaurant website.
+            </p>
+            <p style="margin-top: 20px;">
+                Please enable JavaScript in your browser settings and refresh the page.
+            </p>
+        </div>
+    </noscript>
+    
+    <!-- Loading Spinner -->
+    <div class="loading-spinner"></div>
+    
+    <!-- React App Root -->
+    <div id="root"></div>
+    
+    <!-- Performance & Analytics Scripts -->
+    <script>
+        // Mark when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+        });
+        
+        // Service Worker Registration (for PWA capabilities)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+        
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const perfData = performance.getEntriesByType('navigation')[0];
+                console.log('Page Load Time:', perfData.loadEventEnd - perfData.fetchStart, 'ms');
+            }, 0);
+        });
+    </script>
+</body>
+</html>

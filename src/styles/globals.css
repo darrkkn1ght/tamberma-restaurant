@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base Colors - Warm Off-White Theme */
+    --background: 40 20% 97%;
+    /* #FAF9F6 */
+    --foreground: 20 10% 10%;
+    /* #1C1917 */
+
+    /* Primary (Terracotta) */
+    --primary: 11 55% 50%;
+    /* #C8553D */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary (Darker Terracotta) */
+    --secondary: 11 55% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted (Soft Neutrals) */
+    --muted: 40 10% 94%;
+    --muted-foreground: 25 5% 45%;
+
+    /* Accents (Champagne/Gold - kept for specialized use) */
+    --accent: 38 40% 70%;
+    --accent-foreground: 20 10% 10%;
+
+    /* Cards & Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 10%;
+
+    /* Borders & Inputs */
+    --border: 20 5% 90%;
+    --input: 20 5% 90%;
+    --ring: 11 55% 50%;
+
+    /* Custom Luxury Tokens */
+    --surface-hover: 40 20% 95%;
+  }
+
+  /* Reserved for future Dark Mode */
+  /* Reserved for future Dark Mode */
+  .dark {
+    --background: 20 10% 5%;
+    --foreground: 40 20% 97%;
+
+    --primary: 11 55% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --muted: 20 5% 15%;
+    --muted-foreground: 25 5% 60%;
+
+    --card: 20 10% 7%;
+    --card-foreground: 40 20% 97%;
+
+    --border: 20 5% 15%;
+    --input: 20 5% 15%;
+    --ring: 11 55% 50%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/20 selection:text-primary;
+    background-image: url('/images/texture/silk-flow.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* Blend with the base color gently */
+    background-blend-mode: soft-light;
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
