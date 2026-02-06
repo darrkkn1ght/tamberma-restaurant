@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
-            <body className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
+            <body className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden" suppressHydrationWarning>
                 <BookingProvider>
                     <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} forcedTheme="light">
                         {children}
