@@ -11,7 +11,7 @@ export default function Hero() {
     const { openDrawer } = useBooking()
 
     return (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
             {/* Background with Luxury Gradient Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image

@@ -38,7 +38,7 @@ const stats = [
 
 export default function SocialProof() {
     return (
-        <section className="py-12 md:py-20 bg-neutral-50 border-b border-neutral-200/60 relative overflow-hidden">
+        <section className="py-12 md:py-20 bg-neutral-50 border-b border-neutral-200/60 relative overflow-x-hidden">
             {/* Subtle Texture */}
             <div className="absolute inset-0 opacity-[0.03] bg-[url('/images/texture/noise.png')] mix-blend-multiply"></div>
 
